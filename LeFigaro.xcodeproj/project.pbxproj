@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
+		239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9619C435FB000FD520 /* CoreGraphics.framework */; };
+		239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
+		239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCE9D19C435FB000FD520 /* InfoPlist.strings */; };
+		239CCEA119C435FB000FD520 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEA019C435FB000FD520 /* main.m */; };
+		239CCEA819C435FB000FD520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEA619C435FB000FD520 /* Main.storyboard */; };
+		239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEAC19C435FB000FD520 /* Images.xcassets */; };
+		239CCEB419C435FB000FD520 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCEB319C435FB000FD520 /* XCTest.framework */; };
+		239CCEB519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
+		239CCEB619C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
+		239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEBC19C435FB000FD520 /* InfoPlist.strings */; };
+		239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEBF19C435FB000FD520 /* LeFigaroTests.m */; };
+		239CCED619C437B3000FD520 /* ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED019C437B3000FD520 /* ANCategory.m */; };
+		239CCED819C437B3000FD520 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED519C437B3000FD520 /* ANViewController.m */; };
+		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		239CCEB719C435FB000FD520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 239CCE8919C435FB000FD520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 239CCE9019C435FB000FD520;
+			remoteInfo = LeFigaro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		239CCE9119C435FB000FD520 /* LeFigaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeFigaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		239CCE9419C435FB000FD520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		239CCE9619C435FB000FD520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		239CCE9819C435FB000FD520 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		239CCE9C19C435FB000FD520 /* LeFigaro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeFigaro-Info.plist"; sourceTree = "<group>"; };
+		239CCE9E19C435FB000FD520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		239CCEA019C435FB000FD520 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		239CCEA219C435FB000FD520 /* LeFigaro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeFigaro-Prefix.pch"; sourceTree = "<group>"; };
+		239CCEA719C435FB000FD520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		239CCEAC19C435FB000FD520 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		239CCEB219C435FB000FD520 /* LeFigaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeFigaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		239CCEB319C435FB000FD520 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		239CCEBB19C435FB000FD520 /* LeFigaroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeFigaroTests-Info.plist"; sourceTree = "<group>"; };
+		239CCEBD19C435FB000FD520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		239CCEBF19C435FB000FD520 /* LeFigaroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeFigaroTests.m; sourceTree = "<group>"; };
+		239CCECF19C437B3000FD520 /* ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategory.h; sourceTree = "<group>"; };
+		239CCED019C437B3000FD520 /* ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategory.m; sourceTree = "<group>"; };
+		239CCED419C437B3000FD520 /* ANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANViewController.h; sourceTree = "<group>"; };
+		239CCED519C437B3000FD520 /* ANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
+		239CCED919C43806000FD520 /* ANAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
+		239CCEDA19C43806000FD520 /* ANAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		239CCE8E19C435FB000FD520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */,
+				239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */,
+				239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239CCEAF19C435FB000FD520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCEB419C435FB000FD520 /* XCTest.framework in Frameworks */,
+				239CCEB619C435FB000FD520 /* UIKit.framework in Frameworks */,
+				239CCEB519C435FB000FD520 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		239CCE8819C435FB000FD520 = {
+			isa = PBXGroup;
+			children = (
+				239CCE9A19C435FB000FD520 /* LeFigaro */,
+				239CCEB919C435FB000FD520 /* LeFigaroTests */,
+				239CCE9319C435FB000FD520 /* Frameworks */,
+				239CCE9219C435FB000FD520 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		239CCE9219C435FB000FD520 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				239CCE9119C435FB000FD520 /* LeFigaro.app */,
+				239CCEB219C435FB000FD520 /* LeFigaroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		239CCE9319C435FB000FD520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				239CCE9419C435FB000FD520 /* Foundation.framework */,
+				239CCE9619C435FB000FD520 /* CoreGraphics.framework */,
+				239CCE9819C435FB000FD520 /* UIKit.framework */,
+				239CCEB319C435FB000FD520 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		239CCE9A19C435FB000FD520 /* LeFigaro */ = {
+			isa = PBXGroup;
+			children = (
+				239CCED919C43806000FD520 /* ANAppDelegate.h */,
+				239CCEDA19C43806000FD520 /* ANAppDelegate.m */,
+				239CCECC19C437B3000FD520 /* Classes */,
+				239CCEA619C435FB000FD520 /* Main.storyboard */,
+				239CCEAC19C435FB000FD520 /* Images.xcassets */,
+				239CCE9B19C435FB000FD520 /* Supporting Files */,
+			);
+			path = LeFigaro;
+			sourceTree = "<group>";
+		};
+		239CCE9B19C435FB000FD520 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				239CCE9C19C435FB000FD520 /* LeFigaro-Info.plist */,
+				239CCE9D19C435FB000FD520 /* InfoPlist.strings */,
+				239CCEA019C435FB000FD520 /* main.m */,
+				239CCEA219C435FB000FD520 /* LeFigaro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		239CCEB919C435FB000FD520 /* LeFigaroTests */ = {
+			isa = PBXGroup;
+			children = (
+				239CCEBF19C435FB000FD520 /* LeFigaroTests.m */,
+				239CCEBA19C435FB000FD520 /* Supporting Files */,
+			);
+			path = LeFigaroTests;
+			sourceTree = "<group>";
+		};
+		239CCEBA19C435FB000FD520 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				239CCEBB19C435FB000FD520 /* LeFigaroTests-Info.plist */,
+				239CCEBC19C435FB000FD520 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		239CCECC19C437B3000FD520 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				239CCED119C437B3000FD520 /* ViewController */,
+				239CCECD19C437B3000FD520 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		239CCECD19C437B3000FD520 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				239CCECE19C437B3000FD520 /* Category */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		239CCECE19C437B3000FD520 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				239CCECF19C437B3000FD520 /* ANCategory.h */,
+				239CCED019C437B3000FD520 /* ANCategory.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		239CCED119C437B3000FD520 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				239CCED419C437B3000FD520 /* ANViewController.h */,
+				239CCED519C437B3000FD520 /* ANViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		239CCE9019C435FB000FD520 /* LeFigaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 239CCEC319C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaro" */;
+			buildPhases = (
+				239CCE8D19C435FB000FD520 /* Sources */,
+				239CCE8E19C435FB000FD520 /* Frameworks */,
+				239CCE8F19C435FB000FD520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeFigaro;
+			productName = LeFigaro;
+			productReference = 239CCE9119C435FB000FD520 /* LeFigaro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		239CCEB119C435FB000FD520 /* LeFigaroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 239CCEC619C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaroTests" */;
+			buildPhases = (
+				239CCEAE19C435FB000FD520 /* Sources */,
+				239CCEAF19C435FB000FD520 /* Frameworks */,
+				239CCEB019C435FB000FD520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				239CCEB819C435FB000FD520 /* PBXTargetDependency */,
+			);
+			name = LeFigaroTests;
+			productName = LeFigaroTests;
+			productReference = 239CCEB219C435FB000FD520 /* LeFigaroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		239CCE8919C435FB000FD520 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = antrix1989;
+				TargetAttributes = {
+					239CCEB119C435FB000FD520 = {
+						TestTargetID = 239CCE9019C435FB000FD520;
+					};
+				};
+			};
+			buildConfigurationList = 239CCE8C19C435FB000FD520 /* Build configuration list for PBXProject "LeFigaro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 239CCE8819C435FB000FD520;
+			productRefGroup = 239CCE9219C435FB000FD520 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				239CCE9019C435FB000FD520 /* LeFigaro */,
+				239CCEB119C435FB000FD520 /* LeFigaroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		239CCE8F19C435FB000FD520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */,
+				239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */,
+				239CCEA819C435FB000FD520 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239CCEB019C435FB000FD520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		239CCE8D19C435FB000FD520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCED619C437B3000FD520 /* ANCategory.m in Sources */,
+				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
+				239CCEA119C435FB000FD520 /* main.m in Sources */,
+				239CCED819C437B3000FD520 /* ANViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239CCEAE19C435FB000FD520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		239CCEB819C435FB000FD520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 239CCE9019C435FB000FD520 /* LeFigaro */;
+			targetProxy = 239CCEB719C435FB000FD520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		239CCE9D19C435FB000FD520 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				239CCE9E19C435FB000FD520 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		239CCEA619C435FB000FD520 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				239CCEA719C435FB000FD520 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		239CCEBC19C435FB000FD520 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				239CCEBD19C435FB000FD520 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		239CCEC119C435FB000FD520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		239CCEC219C435FB000FD520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		239CCEC419C435FB000FD520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
+				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		239CCEC519C435FB000FD520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
+				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		239CCEC719C435FB000FD520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeFigaro.app/LeFigaro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LeFigaroTests/LeFigaroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		239CCEC819C435FB000FD520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeFigaro.app/LeFigaro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
+				INFOPLIST_FILE = "LeFigaroTests/LeFigaroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		239CCE8C19C435FB000FD520 /* Build configuration list for PBXProject "LeFigaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239CCEC119C435FB000FD520 /* Debug */,
+				239CCEC219C435FB000FD520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		239CCEC319C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239CCEC419C435FB000FD520 /* Debug */,
+				239CCEC519C435FB000FD520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		239CCEC619C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239CCEC719C435FB000FD520 /* Debug */,
+				239CCEC819C435FB000FD520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 239CCE8919C435FB000FD520 /* Project object */;
+}
