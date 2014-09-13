@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B71520667FF4452B92FDEA5 /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 		239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
 		239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9619C435FB000FD520 /* CoreGraphics.framework */; };
 		239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
@@ -20,8 +21,13 @@
 		239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEBC19C435FB000FD520 /* InfoPlist.strings */; };
 		239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEBF19C435FB000FD520 /* LeFigaroTests.m */; };
 		239CCED619C437B3000FD520 /* ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED019C437B3000FD520 /* ANCategory.m */; };
-		239CCED819C437B3000FD520 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED519C437B3000FD520 /* ANViewController.m */; };
+		239CCED819C437B3000FD520 /* ANHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED519C437B3000FD520 /* ANHomeViewController.m */; };
 		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
+		239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDE19C43967000FD520 /* ANApiClient.m */; };
+		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
+		239CCEED19C47527000FD520 /* ANCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */; };
+		239CCEEF19C4754B000FD520 /* ANCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */; };
+		5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +58,20 @@
 		239CCEBF19C435FB000FD520 /* LeFigaroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeFigaroTests.m; sourceTree = "<group>"; };
 		239CCECF19C437B3000FD520 /* ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategory.h; sourceTree = "<group>"; };
 		239CCED019C437B3000FD520 /* ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategory.m; sourceTree = "<group>"; };
-		239CCED419C437B3000FD520 /* ANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANViewController.h; sourceTree = "<group>"; };
-		239CCED519C437B3000FD520 /* ANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
+		239CCED419C437B3000FD520 /* ANHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANHomeViewController.h; sourceTree = "<group>"; };
+		239CCED519C437B3000FD520 /* ANHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANHomeViewController.m; sourceTree = "<group>"; };
 		239CCED919C43806000FD520 /* ANAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		239CCEDA19C43806000FD520 /* ANAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
+		239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANJSONSerializable.h; sourceTree = "<group>"; };
+		239CCEDD19C43967000FD520 /* ANApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiClient.h; sourceTree = "<group>"; };
+		239CCEDE19C43967000FD520 /* ANApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiClient.m; sourceTree = "<group>"; };
+		239CCEE019C43A1C000FD520 /* ANConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANConstants.h; sourceTree = "<group>"; };
+		239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANActivityIndicatorView.xib; sourceTree = "<group>"; };
+		239CCEEB19C47527000FD520 /* ANCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategoryViewCell.h; sourceTree = "<group>"; };
+		239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategoryViewCell.m; sourceTree = "<group>"; };
+		239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANCategoryViewCell.xib; sourceTree = "<group>"; };
+		89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeFigaro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeFigaro.xcconfig"; path = "Pods/Pods-LeFigaro.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 				239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */,
 				239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */,
 				239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */,
+				5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,7 @@
 				239CCEB419C435FB000FD520 /* XCTest.framework in Frameworks */,
 				239CCEB619C435FB000FD520 /* UIKit.framework in Frameworks */,
 				239CCEB519C435FB000FD520 /* Foundation.framework in Frameworks */,
+				1B71520667FF4452B92FDEA5 /* libPods-LeFigaro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +107,7 @@
 				239CCEB919C435FB000FD520 /* LeFigaroTests */,
 				239CCE9319C435FB000FD520 /* Frameworks */,
 				239CCE9219C435FB000FD520 /* Products */,
+				9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +127,7 @@
 				239CCE9619C435FB000FD520 /* CoreGraphics.framework */,
 				239CCE9819C435FB000FD520 /* UIKit.framework */,
 				239CCEB319C435FB000FD520 /* XCTest.framework */,
+				89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +137,9 @@
 			children = (
 				239CCED919C43806000FD520 /* ANAppDelegate.h */,
 				239CCEDA19C43806000FD520 /* ANAppDelegate.m */,
+				239CCEE019C43A1C000FD520 /* ANConstants.h */,
+				239CCEDD19C43967000FD520 /* ANApiClient.h */,
+				239CCEDE19C43967000FD520 /* ANApiClient.m */,
 				239CCECC19C437B3000FD520 /* Classes */,
 				239CCEA619C435FB000FD520 /* Main.storyboard */,
 				239CCEAC19C435FB000FD520 /* Images.xcassets */,
@@ -159,6 +182,8 @@
 			children = (
 				239CCED119C437B3000FD520 /* ViewController */,
 				239CCECD19C437B3000FD520 /* Models */,
+				239CCEE319C43E71000FD520 /* Views */,
+				239CCEE919C47527000FD520 /* Cells */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				239CCECE19C437B3000FD520 /* Category */,
+				239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,10 +209,37 @@
 		239CCED119C437B3000FD520 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				239CCED419C437B3000FD520 /* ANViewController.h */,
-				239CCED519C437B3000FD520 /* ANViewController.m */,
+				239CCED419C437B3000FD520 /* ANHomeViewController.h */,
+				239CCED519C437B3000FD520 /* ANHomeViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		239CCEE319C43E71000FD520 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		239CCEE919C47527000FD520 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				239CCEEA19C47527000FD520 /* CategoryViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		239CCEEA19C47527000FD520 /* CategoryViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				239CCEEB19C47527000FD520 /* ANCategoryViewCell.h */,
+				239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */,
+				239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */,
+			);
+			name = CategoryViewCell;
+			path = HomeViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 239CCEC319C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaro" */;
 			buildPhases = (
+				449F15129BAA4E0CAE1D3CB5 /* Check Pods Manifest.lock */,
 				239CCE8D19C435FB000FD520 /* Sources */,
 				239CCE8E19C435FB000FD520 /* Frameworks */,
 				239CCE8F19C435FB000FD520 /* Resources */,
+				BCE382F2985747199B97853C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 239CCEC619C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaroTests" */;
 			buildPhases = (
+				9D1D82E154934E2CB1091F46 /* Check Pods Manifest.lock */,
 				239CCEAE19C435FB000FD520 /* Sources */,
 				239CCEAF19C435FB000FD520 /* Frameworks */,
 				239CCEB019C435FB000FD520 /* Resources */,
+				C927AC70F8204518BDA9A4AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */,
+				239CCEEF19C4754B000FD520 /* ANCategoryViewCell.xib in Resources */,
 				239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */,
 				239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */,
 				239CCEA819C435FB000FD520 /* Main.storyboard in Resources */,
@@ -282,15 +341,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		449F15129BAA4E0CAE1D3CB5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1D82E154934E2CB1091F46 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCE382F2985747199B97853C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-LeFigaro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C927AC70F8204518BDA9A4AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-LeFigaro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		239CCE8D19C435FB000FD520 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239CCEED19C47527000FD520 /* ANCategoryViewCell.m in Sources */,
+				239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */,
 				239CCED619C437B3000FD520 /* ANCategory.m in Sources */,
 				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
-				239CCED819C437B3000FD520 /* ANViewController.m in Sources */,
+				239CCED819C437B3000FD520 /* ANHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +536,7 @@
 		};
 		239CCEC419C435FB000FD520 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -425,6 +550,7 @@
 		};
 		239CCEC519C435FB000FD520 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -438,6 +564,7 @@
 		};
 		239CCEC719C435FB000FD520 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeFigaro.app/LeFigaro";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -460,6 +587,7 @@
 		};
 		239CCEC819C435FB000FD520 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeFigaro.app/LeFigaro";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -495,6 +623,7 @@
 				239CCEC519C435FB000FD520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		239CCEC619C435FB000FD520 /* Build configuration list for PBXNativeTarget "LeFigaroTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +632,7 @@
 				239CCEC819C435FB000FD520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

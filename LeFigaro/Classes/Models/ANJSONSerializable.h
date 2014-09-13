@@ -1,13 +1,13 @@
 //
-//  ANViewController.h
+//  ANJSONSerializable.h
 //  LeFigaro
 //
 //  Created by Sergey Demchenko on 9/13/14.
 //  Copyright (c) 2014 antrix1989. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@protocol ANJSONSerializable <NSObject>
 
-@interface ANViewController : UIViewController
+- (void)readFromDictionary:(NSDictionary *)dictionary;
 
 @end

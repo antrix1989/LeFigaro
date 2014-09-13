@@ -7,7 +7,15 @@
 //
 
 #import "ANCategory.h"
+#import "ANApiClient.h"
 
 @implementation ANCategory
+
+#pragma mark - Public
+
++ (void)getAllCategoriesInBackground:(ANArrayResultBlock)block
+{
+    [ANApiClient getAllCategories:block];
+}
 
 @end

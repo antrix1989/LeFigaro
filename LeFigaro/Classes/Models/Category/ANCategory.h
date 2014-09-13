@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 antrix1989. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface ANCategory : NSObject
+
+/**
+ Returns asynchronously list of all categories.
+ @param block The block to execute. The block should have the following argument signature: (NSArray *objects, NSError *error)
+ */
++ (void)getAllCategoriesInBackground:(ANArrayResultBlock)block;
 
 @end
