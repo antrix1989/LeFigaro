@@ -6,7 +6,19 @@
 //  Copyright (c) 2014 antrix1989. All rights reserved.
 //
 
-@interface ANCategory : NSObject
+#import "ANJSONSerializable.h"
+
+@interface ANCategory : NSObject <ANJSONSerializable>
+
+/**
+ Name of category.
+ */
+@property (strong, nonatomic) NSString *name;
+
+/**
+ Sub categories of this category.
+ */
+@property (strong, nonatomic) NSArray *subCategories;
 
 /**
  Returns asynchronously list of all categories.

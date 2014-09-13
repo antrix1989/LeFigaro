@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1B71520667FF4452B92FDEA5 /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
+		2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376300E19CEDCBE0022F349 /* ANArticleCell.m */; };
+		2376301519CEDCBE0022F349 /* ANArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376300F19CEDCBE0022F349 /* ANArticleCell.xib */; };
+		2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */; };
+		2376301719CEDCBE0022F349 /* ANCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376301319CEDCBE0022F349 /* ANCategoryViewCell.xib */; };
 		239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
 		239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9619C435FB000FD520 /* CoreGraphics.framework */; };
 		239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
@@ -25,8 +29,8 @@
 		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
 		239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDE19C43967000FD520 /* ANApiClient.m */; };
 		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
-		239CCEED19C47527000FD520 /* ANCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */; };
-		239CCEEF19C4754B000FD520 /* ANCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */; };
+		23DCD2DD19C56D2D00388E2E /* ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */; };
+		23DCD2E019C5736400388E2E /* ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCD2DF19C5736400388E2E /* ANArticle.m */; };
 		5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2376300D19CEDCBE0022F349 /* ANArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticleCell.h; sourceTree = "<group>"; };
+		2376300E19CEDCBE0022F349 /* ANArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticleCell.m; sourceTree = "<group>"; };
+		2376300F19CEDCBE0022F349 /* ANArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANArticleCell.xib; sourceTree = "<group>"; };
+		2376301119CEDCBE0022F349 /* ANCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategoryViewCell.h; sourceTree = "<group>"; };
+		2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategoryViewCell.m; sourceTree = "<group>"; };
+		2376301319CEDCBE0022F349 /* ANCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANCategoryViewCell.xib; sourceTree = "<group>"; };
 		239CCE9119C435FB000FD520 /* LeFigaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeFigaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239CCE9419C435FB000FD520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		239CCE9619C435FB000FD520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,9 +77,10 @@
 		239CCEDE19C43967000FD520 /* ANApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiClient.m; sourceTree = "<group>"; };
 		239CCEE019C43A1C000FD520 /* ANConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANConstants.h; sourceTree = "<group>"; };
 		239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANActivityIndicatorView.xib; sourceTree = "<group>"; };
-		239CCEEB19C47527000FD520 /* ANCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategoryViewCell.h; sourceTree = "<group>"; };
-		239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategoryViewCell.m; sourceTree = "<group>"; };
-		239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANCategoryViewCell.xib; sourceTree = "<group>"; };
+		23DCD2DB19C56D2D00388E2E /* ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSubCategory.h; sourceTree = "<group>"; };
+		23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSubCategory.m; sourceTree = "<group>"; };
+		23DCD2DE19C5736400388E2E /* ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticle.h; sourceTree = "<group>"; };
+		23DCD2DF19C5736400388E2E /* ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticle.m; sourceTree = "<group>"; };
 		89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeFigaro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeFigaro.xcconfig"; path = "Pods/Pods-LeFigaro.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +111,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2376300C19CEDCBE0022F349 /* ArticleCell */ = {
+			isa = PBXGroup;
+			children = (
+				2376300D19CEDCBE0022F349 /* ANArticleCell.h */,
+				2376300E19CEDCBE0022F349 /* ANArticleCell.m */,
+				2376300F19CEDCBE0022F349 /* ANArticleCell.xib */,
+			);
+			path = ArticleCell;
+			sourceTree = "<group>";
+		};
+		2376301019CEDCBE0022F349 /* CategoryViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2376301119CEDCBE0022F349 /* ANCategoryViewCell.h */,
+				2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */,
+				2376301319CEDCBE0022F349 /* ANCategoryViewCell.xib */,
+			);
+			path = CategoryViewCell;
+			sourceTree = "<group>";
+		};
 		239CCE8819C435FB000FD520 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +233,10 @@
 			children = (
 				239CCECF19C437B3000FD520 /* ANCategory.h */,
 				239CCED019C437B3000FD520 /* ANCategory.m */,
+				23DCD2DB19C56D2D00388E2E /* ANSubCategory.h */,
+				23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */,
+				23DCD2DE19C5736400388E2E /* ANArticle.h */,
+				23DCD2DF19C5736400388E2E /* ANArticle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -226,20 +261,10 @@
 		239CCEE919C47527000FD520 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				239CCEEA19C47527000FD520 /* CategoryViewCell */,
+				2376300C19CEDCBE0022F349 /* ArticleCell */,
+				2376301019CEDCBE0022F349 /* CategoryViewCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		239CCEEA19C47527000FD520 /* CategoryViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				239CCEEB19C47527000FD520 /* ANCategoryViewCell.h */,
-				239CCEEC19C47527000FD520 /* ANCategoryViewCell.m */,
-				239CCEEE19C4754B000FD520 /* ANCategoryViewCell.xib */,
-			);
-			name = CategoryViewCell;
-			path = HomeViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,9 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2376301519CEDCBE0022F349 /* ANArticleCell.xib in Resources */,
 				239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */,
-				239CCEEF19C4754B000FD520 /* ANCategoryViewCell.xib in Resources */,
 				239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */,
+				2376301719CEDCBE0022F349 /* ANCategoryViewCell.xib in Resources */,
 				239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */,
 				239CCEA819C435FB000FD520 /* Main.storyboard in Resources */,
 			);
@@ -409,12 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				239CCEED19C47527000FD520 /* ANCategoryViewCell.m in Sources */,
+				23DCD2E019C5736400388E2E /* ANArticle.m in Sources */,
 				239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */,
 				239CCED619C437B3000FD520 /* ANCategory.m in Sources */,
 				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
+				2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */,
+				23DCD2DD19C56D2D00388E2E /* ANSubCategory.m in Sources */,
 				239CCED819C437B3000FD520 /* ANHomeViewController.m in Sources */,
+				2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

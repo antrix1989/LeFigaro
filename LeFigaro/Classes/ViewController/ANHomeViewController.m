@@ -8,6 +8,7 @@
 
 #import "ANHomeViewController.h"
 #import "ANCategory.h"
+#import "ANSubCategory.h"
 #import "ANCategoryViewCell.h"
 
 static NSString *kCategoryViewCell = @"ANCategoryViewCell";
@@ -59,6 +60,8 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ANCategoryViewCell *categoryViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:kCategoryViewCell forIndexPath:indexPath];
+    
+    categoryViewCell.category = [self.categories objectAtIndex:indexPath.item];
     
     return categoryViewCell;
 }
