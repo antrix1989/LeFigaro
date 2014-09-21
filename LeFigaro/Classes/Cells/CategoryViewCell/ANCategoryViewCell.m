@@ -18,7 +18,7 @@ static NSString *kArticleCell = @"ANArticleCell";
 
 @property (weak, nonatomic) IBOutlet UIImageView *promotedArticleImageView;
 @property (weak, nonatomic) IBOutlet UITableView *articlesTableView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *promotedArticleTitleLabel;
 
 @property (strong, nonatomic) ANSubCategory *firstSubCategory;
 @property (strong, nonatomic) NSArray *articles;
@@ -33,13 +33,25 @@ static NSString *kArticleCell = @"ANArticleCell";
     [self.articlesTableView registerNib:[UINib nibWithNibName:kArticleCell bundle:nil] forCellReuseIdentifier:kArticleCell];
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    self.promotedArticleImageView.image = nil;
+}
+
+#pragma mark - IBAction
+
+- (IBAction)onPromotedArticleTapped:(id)sender
+{
+    [self.delegate didSelectArticle:self.promotedArticle amongArticles:self.allArticles];
+}
+
 #pragma mark - Public
 
 - (void)setCategory:(ANCategory *)category
 {
     _category = category;
-    
-    self.titleLabel.text = category.name;
     
     if (category.subCategories.count > 0) {
         self.firstSubCategory = category.subCategories[0];
@@ -65,14 +77,6 @@ static NSString *kArticleCell = @"ANArticleCell";
     [self.articlesTableView reloadData];
 }
 
-- (void)setPromotedArticle:(ANArticle *)promotedArticle
-{
-    _promotedArticle = promotedArticle;
-    
-    NSString *imageUrl = [NSString stringWithFormat:promotedArticle.imageUrl, (int)self.promotedArticleImageView.frame.size.width, (int)self.promotedArticleImageView.frame.size.height];
-    [self.promotedArticleImageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -86,6 +90,34 @@ static NSString *kArticleCell = @"ANArticleCell";
     articleCell.article = self.articles[indexPath.row];
     
     return articleCell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegate didSelectArticle:self.articles[indexPath.row] amongArticles:self.allArticles];
+}
+
+#pragma mark - Private
+
+- (void)setPromotedArticle:(ANArticle *)promotedArticle
+{
+    _promotedArticle = promotedArticle;
+    
+    NSString *imageUrl = [NSString stringWithFormat:promotedArticle.imageUrl, (int)self.promotedArticleImageView.frame.size.width, (int)self.promotedArticleImageView.frame.size.height];
+    [self.promotedArticleImageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    self.promotedArticleTitleLabel.text = promotedArticle.title;
+}
+
+
+- (NSArray *)allArticles
+{
+    NSMutableArray *allArticles = [[NSMutableArray alloc] initWithCapacity:self.articles.count + 1];
+    [allArticles addObjectsFromArray:self.articles];
+    [allArticles insertObject:self.promotedArticle atIndex:0];
+    
+    return allArticles;
 }
 
 @end

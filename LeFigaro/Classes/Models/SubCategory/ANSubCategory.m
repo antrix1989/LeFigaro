@@ -9,7 +9,15 @@
 #import "ANSubCategory.h"
 #import "ANApiClient.h"
 
+@interface ANSubCategory ()
+
+@property (strong, nonatomic) ANApiClient *apiClient;
+
+@end
+
 @implementation ANSubCategory
+
+objection_requires(@"apiClient")
 
 #pragma mark - ANJSONSerializable
 
@@ -23,7 +31,7 @@
 
 - (void)getAllArticlesInBackground:(ANArrayResultBlock)block
 {
-    [ANApiClient getAllArticlesForSubCategory:self withBlock:block];
+    [self.apiClient getAllArticlesForSubCategory:self withBlock:block];
 }
 
 @end

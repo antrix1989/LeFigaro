@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 antrix1989. All rights reserved.
 //
 
-@interface ANHomeViewController : UIViewController
+#import "ANPageViewController.h"
+
+@interface ANHomeViewController : ANPageViewController
 
 @end

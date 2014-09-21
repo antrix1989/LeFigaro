@@ -8,3 +8,4 @@
 
 typedef void (^ANBooleanResultBlock)(BOOL succeeded, NSError *error);
 typedef void (^ANArrayResultBlock)(NSArray *objects, NSError *error);
+typedef void (^ANObjectResultBlock)(NSObject *object, NSError *error);

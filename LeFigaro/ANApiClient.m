@@ -16,35 +16,39 @@ NSString *const kBaseUrlString = @"http://figaro.service.yagasp.com";
 NSString *const ANLeFigaroErrorDomain = @"com.lefigaro.app";
 const int ANParseError = 1;
 
-//@interface ANApiClient ()
-//
-//@property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
-//
-//@end
+@interface ANApiClient ()
+
+@property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
+@property (strong, nonatomic) dispatch_queue_t syncDispatchQueue;
+
+@end
 
 @implementation ANApiClient
 
+objection_register_singleton(ANApiClient)
+
 #pragma mark - PUblic
 
-+ (void)getAllCategories:(ANArrayResultBlock)block
+- (void)cancelAllOperations
+{
+    [self.manager.operationQueue cancelAllOperations];
+}
+
+- (void)getAllCategories:(ANArrayResultBlock)block
 {
     if (!block) {
         return;
     }
     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrlString]];
-    [manager.operationQueue setMaxConcurrentOperationCount:1];
-    
-    NSDictionary *parameters = nil;
     NSString *urlString = [NSString stringWithFormat:@"/article/categories"];
     
-    [manager GET:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"responseObject: %@", responseObject);
         
         NSMutableArray *categories = [NSMutableArray new];
         
         for (NSDictionary *categoryInfo in responseObject) {
-            ANCategory *category = [ANCategory new];
+            ANCategory *category = [[JSObjection defaultInjector] getObject:ANCategory.class];
             [category readFromDictionary:categoryInfo];
             
             [categories addObject:category];
@@ -61,19 +65,15 @@ const int ANParseError = 1;
     }];
 }
 
-+ (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block
+- (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block
 {
     if (!block) {
         return;
     }
     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrlString]];
-    [manager.operationQueue setMaxConcurrentOperationCount:1];
-    
-    NSDictionary *parameters = nil;
     NSString *urlString = [NSString stringWithFormat:@"/article/header/%@", subCategory.remoteID];
     
-    [manager GET:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
+    [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
         NSLog(@"responseObject: %@", responseObject);
         
         NSMutableArray *articles = [NSMutableArray new];
@@ -88,7 +88,7 @@ const int ANParseError = 1;
         NSArray *articlesInfo = responseObject[1];
         
         for (NSDictionary *articleInfo in articlesInfo) {
-            ANArticle *article = [ANArticle new];
+            ANArticle *article = [[JSObjection defaultInjector] getObject:ANArticle.class];
             [article readFromDictionary:articleInfo];
             
             [articles addObject:article];
@@ -103,6 +103,54 @@ const int ANParseError = 1;
             block(nil, error);
         }
     }];
+}
+
+- (void)getArticleWithID:(NSString *)articleID withBlock:(ANObjectResultBlock)block
+{
+    if (!block) {
+        return;
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:@"/article/%@", articleID];
+    
+    [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSLog(@"responseObject: %@", responseObject);
+        
+        ANArticle *article = [[JSObjection defaultInjector] getObject:ANArticle.class];
+        [article readFromDictionary:responseObject];
+        
+        block(article, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", [error localizedDescription]);
+        
+        if (block) {
+            block(false, error);
+        }
+    }];
+}
+
+#pragma mark - Private
+
+- (AFHTTPRequestOperationManager *)manager
+{
+    dispatch_sync(self.syncDispatchQueue, ^{
+        if (!_manager) {
+            _manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrlString]];
+            [_manager.operationQueue setMaxConcurrentOperationCount:1];
+        }
+    });
+    
+    return _manager;
+}
+
+- (dispatch_queue_t)syncDispatchQueue
+{
+    if (!_syncDispatchQueue) {
+        _syncDispatchQueue = dispatch_queue_create("com.lfhttpclient.syncDispatchQueue", NULL);
+    }
+    
+    return _syncDispatchQueue;
 }
 
 @end

@@ -19,6 +19,15 @@
 
 @implementation ANArticleCell
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    self.thumbnailImageView.image = nil;
+    self.titleLabel.text = @"";
+    self.subTitleLabel.text = @"";
+}
+
 #pragma mark - Publice
 
 - (void)setArticle:(ANArticle *)article
@@ -26,9 +35,9 @@
     _article = article;
     
     self.titleLabel.text = article.title;
-    self.subTitleLabel.text = article.subTitle;
+    self.subTitleLabel.text = article.subtitle;
     NSString *imageUrl = [NSString stringWithFormat:article.imageUrl, (int)self.thumbnailImageView.frame.size.width, (int)self.thumbnailImageView.frame.size.height];
-    [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
+    [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 @end

@@ -12,12 +12,22 @@
 		2376301519CEDCBE0022F349 /* ANArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376300F19CEDCBE0022F349 /* ANArticleCell.xib */; };
 		2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */; };
 		2376301719CEDCBE0022F349 /* ANCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376301319CEDCBE0022F349 /* ANCategoryViewCell.xib */; };
+		2376302019CEF29F0022F349 /* ANHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376301F19CEF29F0022F349 /* ANHomeViewController.m */; };
+		2376302A19CEF31E0022F349 /* ANArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376302819CEF31E0022F349 /* ANArticlesViewController.m */; };
+		2376302F19CEF5320022F349 /* ANArticlesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376302E19CEF5320022F349 /* ANArticlesViewController.storyboard */; };
+		2376303919CF04290022F349 /* ANArticleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376303719CF04290022F349 /* ANArticleViewCell.m */; };
+		2376303A19CF04290022F349 /* ANArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376303819CF04290022F349 /* ANArticleViewCell.xib */; };
+		2376304819CF53A00022F349 /* ANHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376304719CF53A00022F349 /* ANHomeViewController.storyboard */; };
+		2376304B19CF5D0F0022F349 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376304A19CF5D0F0022F349 /* ANViewController.m */; };
+		2376304E19CF603D0022F349 /* ANPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376304D19CF603D0022F349 /* ANPageViewController.m */; };
+		2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */; };
+		2376305819CF695C0022F349 /* ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305419CF695C0022F349 /* ANSubCategory.m */; };
+		2376305919CF695C0022F349 /* ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305719CF695C0022F349 /* ANArticle.m */; };
 		239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
 		239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9619C435FB000FD520 /* CoreGraphics.framework */; };
 		239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
 		239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCE9D19C435FB000FD520 /* InfoPlist.strings */; };
 		239CCEA119C435FB000FD520 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEA019C435FB000FD520 /* main.m */; };
-		239CCEA819C435FB000FD520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEA619C435FB000FD520 /* Main.storyboard */; };
 		239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEAC19C435FB000FD520 /* Images.xcassets */; };
 		239CCEB419C435FB000FD520 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCEB319C435FB000FD520 /* XCTest.framework */; };
 		239CCEB519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
@@ -25,12 +35,9 @@
 		239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEBC19C435FB000FD520 /* InfoPlist.strings */; };
 		239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEBF19C435FB000FD520 /* LeFigaroTests.m */; };
 		239CCED619C437B3000FD520 /* ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED019C437B3000FD520 /* ANCategory.m */; };
-		239CCED819C437B3000FD520 /* ANHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED519C437B3000FD520 /* ANHomeViewController.m */; };
 		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
 		239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDE19C43967000FD520 /* ANApiClient.m */; };
 		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
-		23DCD2DD19C56D2D00388E2E /* ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */; };
-		23DCD2E019C5736400388E2E /* ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCD2DF19C5736400388E2E /* ANArticle.m */; };
 		5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +58,25 @@
 		2376301119CEDCBE0022F349 /* ANCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategoryViewCell.h; sourceTree = "<group>"; };
 		2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategoryViewCell.m; sourceTree = "<group>"; };
 		2376301319CEDCBE0022F349 /* ANCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANCategoryViewCell.xib; sourceTree = "<group>"; };
+		2376301E19CEF29F0022F349 /* ANHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANHomeViewController.h; sourceTree = "<group>"; };
+		2376301F19CEF29F0022F349 /* ANHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANHomeViewController.m; sourceTree = "<group>"; };
+		2376302719CEF31E0022F349 /* ANArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticlesViewController.h; sourceTree = "<group>"; };
+		2376302819CEF31E0022F349 /* ANArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticlesViewController.m; sourceTree = "<group>"; };
+		2376302E19CEF5320022F349 /* ANArticlesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ANArticlesViewController.storyboard; sourceTree = "<group>"; };
+		2376303619CF04290022F349 /* ANArticleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticleViewCell.h; sourceTree = "<group>"; };
+		2376303719CF04290022F349 /* ANArticleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticleViewCell.m; sourceTree = "<group>"; };
+		2376303819CF04290022F349 /* ANArticleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANArticleViewCell.xib; sourceTree = "<group>"; };
+		2376304719CF53A00022F349 /* ANHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ANHomeViewController.storyboard; sourceTree = "<group>"; };
+		2376304919CF5D0F0022F349 /* ANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANViewController.h; sourceTree = "<group>"; };
+		2376304A19CF5D0F0022F349 /* ANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
+		2376304C19CF603D0022F349 /* ANPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPageViewController.h; sourceTree = "<group>"; };
+		2376304D19CF603D0022F349 /* ANPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPageViewController.m; sourceTree = "<group>"; };
+		2376304F19CF679B0022F349 /* ANArticleHtmlGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticleHtmlGenerator.h; sourceTree = "<group>"; };
+		2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticleHtmlGenerator.m; sourceTree = "<group>"; };
+		2376305319CF695C0022F349 /* ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSubCategory.h; sourceTree = "<group>"; };
+		2376305419CF695C0022F349 /* ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSubCategory.m; sourceTree = "<group>"; };
+		2376305619CF695C0022F349 /* ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticle.h; sourceTree = "<group>"; };
+		2376305719CF695C0022F349 /* ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticle.m; sourceTree = "<group>"; };
 		239CCE9119C435FB000FD520 /* LeFigaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeFigaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239CCE9419C435FB000FD520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		239CCE9619C435FB000FD520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +85,6 @@
 		239CCE9E19C435FB000FD520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		239CCEA019C435FB000FD520 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		239CCEA219C435FB000FD520 /* LeFigaro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeFigaro-Prefix.pch"; sourceTree = "<group>"; };
-		239CCEA719C435FB000FD520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		239CCEAC19C435FB000FD520 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		239CCEB219C435FB000FD520 /* LeFigaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeFigaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		239CCEB319C435FB000FD520 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,8 +93,6 @@
 		239CCEBF19C435FB000FD520 /* LeFigaroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeFigaroTests.m; sourceTree = "<group>"; };
 		239CCECF19C437B3000FD520 /* ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategory.h; sourceTree = "<group>"; };
 		239CCED019C437B3000FD520 /* ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategory.m; sourceTree = "<group>"; };
-		239CCED419C437B3000FD520 /* ANHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANHomeViewController.h; sourceTree = "<group>"; };
-		239CCED519C437B3000FD520 /* ANHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANHomeViewController.m; sourceTree = "<group>"; };
 		239CCED919C43806000FD520 /* ANAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		239CCEDA19C43806000FD520 /* ANAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
 		239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANJSONSerializable.h; sourceTree = "<group>"; };
@@ -77,10 +100,6 @@
 		239CCEDE19C43967000FD520 /* ANApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiClient.m; sourceTree = "<group>"; };
 		239CCEE019C43A1C000FD520 /* ANConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANConstants.h; sourceTree = "<group>"; };
 		239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANActivityIndicatorView.xib; sourceTree = "<group>"; };
-		23DCD2DB19C56D2D00388E2E /* ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSubCategory.h; sourceTree = "<group>"; };
-		23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSubCategory.m; sourceTree = "<group>"; };
-		23DCD2DE19C5736400388E2E /* ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticle.h; sourceTree = "<group>"; };
-		23DCD2DF19C5736400388E2E /* ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticle.m; sourceTree = "<group>"; };
 		89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeFigaro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeFigaro.xcconfig"; path = "Pods/Pods-LeFigaro.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +150,67 @@
 			path = CategoryViewCell;
 			sourceTree = "<group>";
 		};
+		2376301C19CEF29F0022F349 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2376304919CF5D0F0022F349 /* ANViewController.h */,
+				2376304A19CF5D0F0022F349 /* ANViewController.m */,
+				2376304C19CF603D0022F349 /* ANPageViewController.h */,
+				2376304D19CF603D0022F349 /* ANPageViewController.m */,
+				2376301D19CEF29F0022F349 /* HomeViewController */,
+				2376302619CEF31E0022F349 /* ArticlesViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2376301D19CEF29F0022F349 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2376301E19CEF29F0022F349 /* ANHomeViewController.h */,
+				2376301F19CEF29F0022F349 /* ANHomeViewController.m */,
+				2376304719CF53A00022F349 /* ANHomeViewController.storyboard */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		2376302619CEF31E0022F349 /* ArticlesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2376302719CEF31E0022F349 /* ANArticlesViewController.h */,
+				2376302819CEF31E0022F349 /* ANArticlesViewController.m */,
+				2376302E19CEF5320022F349 /* ANArticlesViewController.storyboard */,
+			);
+			path = ArticlesViewController;
+			sourceTree = "<group>";
+		};
+		2376303519CF04290022F349 /* ArticleViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2376303619CF04290022F349 /* ANArticleViewCell.h */,
+				2376303719CF04290022F349 /* ANArticleViewCell.m */,
+				2376303819CF04290022F349 /* ANArticleViewCell.xib */,
+			);
+			path = ArticleViewCell;
+			sourceTree = "<group>";
+		};
+		2376305219CF695C0022F349 /* SubCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2376305319CF695C0022F349 /* ANSubCategory.h */,
+				2376305419CF695C0022F349 /* ANSubCategory.m */,
+			);
+			path = SubCategory;
+			sourceTree = "<group>";
+		};
+		2376305519CF695C0022F349 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				2376305619CF695C0022F349 /* ANArticle.h */,
+				2376305719CF695C0022F349 /* ANArticle.m */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		239CCE8819C435FB000FD520 = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +251,9 @@
 				239CCEE019C43A1C000FD520 /* ANConstants.h */,
 				239CCEDD19C43967000FD520 /* ANApiClient.h */,
 				239CCEDE19C43967000FD520 /* ANApiClient.m */,
+				2376304F19CF679B0022F349 /* ANArticleHtmlGenerator.h */,
+				2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */,
 				239CCECC19C437B3000FD520 /* Classes */,
-				239CCEA619C435FB000FD520 /* Main.storyboard */,
 				239CCEAC19C435FB000FD520 /* Images.xcassets */,
 				239CCE9B19C435FB000FD520 /* Supporting Files */,
 			);
@@ -211,7 +292,7 @@
 		239CCECC19C437B3000FD520 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				239CCED119C437B3000FD520 /* ViewController */,
+				2376301C19CEF29F0022F349 /* ViewControllers */,
 				239CCECD19C437B3000FD520 /* Models */,
 				239CCEE319C43E71000FD520 /* Views */,
 				239CCEE919C47527000FD520 /* Cells */,
@@ -223,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				239CCECE19C437B3000FD520 /* Category */,
+				2376305219CF695C0022F349 /* SubCategory */,
+				2376305519CF695C0022F349 /* Article */,
 				239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */,
 			);
 			path = Models;
@@ -233,21 +316,8 @@
 			children = (
 				239CCECF19C437B3000FD520 /* ANCategory.h */,
 				239CCED019C437B3000FD520 /* ANCategory.m */,
-				23DCD2DB19C56D2D00388E2E /* ANSubCategory.h */,
-				23DCD2DC19C56D2D00388E2E /* ANSubCategory.m */,
-				23DCD2DE19C5736400388E2E /* ANArticle.h */,
-				23DCD2DF19C5736400388E2E /* ANArticle.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		239CCED119C437B3000FD520 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				239CCED419C437B3000FD520 /* ANHomeViewController.h */,
-				239CCED519C437B3000FD520 /* ANHomeViewController.m */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		239CCEE319C43E71000FD520 /* Views */ = {
@@ -261,6 +331,7 @@
 		239CCEE919C47527000FD520 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2376303519CF04290022F349 /* ArticleViewCell */,
 				2376300C19CEDCBE0022F349 /* ArticleCell */,
 				2376301019CEDCBE0022F349 /* CategoryViewCell */,
 			);
@@ -352,8 +423,10 @@
 				239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */,
 				239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */,
 				2376301719CEDCBE0022F349 /* ANCategoryViewCell.xib in Resources */,
+				2376303A19CF04290022F349 /* ANArticleViewCell.xib in Resources */,
+				2376304819CF53A00022F349 /* ANHomeViewController.storyboard in Resources */,
 				239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */,
-				239CCEA819C435FB000FD520 /* Main.storyboard in Resources */,
+				2376302F19CEF5320022F349 /* ANArticlesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,15 +508,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23DCD2E019C5736400388E2E /* ANArticle.m in Sources */,
+				2376303919CF04290022F349 /* ANArticleViewCell.m in Sources */,
 				239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */,
+				2376304E19CF603D0022F349 /* ANPageViewController.m in Sources */,
+				2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */,
 				239CCED619C437B3000FD520 /* ANCategory.m in Sources */,
+				2376302019CEF29F0022F349 /* ANHomeViewController.m in Sources */,
 				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
+				2376305919CF695C0022F349 /* ANArticle.m in Sources */,
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
+				2376304B19CF5D0F0022F349 /* ANViewController.m in Sources */,
 				2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */,
-				23DCD2DD19C56D2D00388E2E /* ANSubCategory.m in Sources */,
-				239CCED819C437B3000FD520 /* ANHomeViewController.m in Sources */,
+				2376302A19CEF31E0022F349 /* ANArticlesViewController.m in Sources */,
 				2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */,
+				2376305819CF695C0022F349 /* ANSubCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,14 +550,6 @@
 				239CCE9E19C435FB000FD520 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		239CCEA619C435FB000FD520 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				239CCEA719C435FB000FD520 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		239CCEBC19C435FB000FD520 /* InfoPlist.strings */ = {

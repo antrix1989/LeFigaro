@@ -13,8 +13,12 @@ extern NSString *const ANLeFigaroErrorDomain;
 
 @interface ANApiClient : NSObject
 
-+ (void)getAllCategories:(ANArrayResultBlock)block;
+- (void)cancelAllOperations;
 
-+ (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block;
+- (void)getAllCategories:(ANArrayResultBlock)block;
+
+- (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block;
+
+- (void)getArticleWithID:(NSString *)articleID withBlock:(ANObjectResultBlock)block;
 
 @end

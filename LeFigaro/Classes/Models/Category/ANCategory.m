@@ -21,7 +21,7 @@
     NSMutableArray *subCategories = [NSMutableArray new];
     
     for (NSDictionary *categoryInfo in dictionary[@"subcategories"]) {
-        ANSubCategory *subCategory = [ANSubCategory new];
+        ANSubCategory *subCategory = [[JSObjection defaultInjector] getObject:ANSubCategory.class];
         [subCategory readFromDictionary:categoryInfo];
         
         [subCategories addObject:subCategory];
@@ -34,7 +34,9 @@
 
 + (void)getAllCategoriesInBackground:(ANArrayResultBlock)block
 {
-    [ANApiClient getAllCategories:block];
+    ANApiClient *apiClient = [[JSObjection defaultInjector] getObject:ANApiClient.class];
+    
+    [apiClient getAllCategories:block];
 }
 
 @end

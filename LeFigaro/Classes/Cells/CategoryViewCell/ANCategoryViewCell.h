@@ -7,9 +7,17 @@
 //
 
 @class ANCategory;
+@class ANArticle;
+
+@protocol ANCategoryViewCellDelegate <NSObject>
+
+- (void)didSelectArticle:(ANArticle *)article amongArticles:(NSArray *)articles;
+
+@end
 
 @interface ANCategoryViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) ANCategory* category;
+@property (weak, nonatomic) id<ANCategoryViewCellDelegate> delegate;
 
 @end

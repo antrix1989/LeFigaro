@@ -10,13 +10,12 @@
 #import "ANCategory.h"
 #import "ANSubCategory.h"
 #import "ANCategoryViewCell.h"
+#import "ANArticlesViewController.h"
+#import "ANArticle.h"
 
 static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 
-@interface ANHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UICollectionView *categoriesCollectionView;
-@property (weak, nonatomic) IBOutlet UIPageControl *categoriesPageControl;
+@interface ANHomeViewController () <ANCategoryViewCellDelegate>
 
 @property (strong, nonatomic) NSArray *categories;
 
@@ -30,7 +29,11 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 {
     [super viewDidLoad];
     
-    [self.categoriesCollectionView registerNib:[UINib nibWithNibName:kCategoryViewCell bundle:nil] forCellWithReuseIdentifier:kCategoryViewCell];
+    [self.collectionView registerNib:[UINib nibWithNibName:kCategoryViewCell bundle:nil] forCellWithReuseIdentifier:kCategoryViewCell];
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 #pragma mark - UIViewController
@@ -45,8 +48,11 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
         [activityIndicatorView hide];
         
         self.categories = categories;
-        self.categoriesPageControl.numberOfPages = categories.count;
-        [self.categoriesCollectionView reloadData];
+        self.pageControl.numberOfPages = categories.count;
+        [self.collectionView reloadData];
+        
+        ANCategory *category = [self.categories objectAtIndex:0];
+        self.navigationItem.title = category.name;
     }];
 }
 
@@ -60,31 +66,31 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ANCategoryViewCell *categoryViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:kCategoryViewCell forIndexPath:indexPath];
-    
+    categoryViewCell.delegate = self;
     categoryViewCell.category = [self.categories objectAtIndex:indexPath.item];
     
     return categoryViewCell;
-}
-
-#pragma mark - UICollectionViewDelegate
-
-#pragma mark - UICollectionViewDelegateFlowLayout
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGSize cellSize = (CGSize) {.width = self.view.frame.size.width, .height = self.view.frame.size.height - self.categoriesPageControl.frame.size.height};
-    
-    return cellSize;
 }
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    CGFloat pageWidth = self.categoriesCollectionView.frame.size.width;
-    NSUInteger pageNumber = (self.categoriesCollectionView.contentOffset.x / pageWidth);
+    [super scrollViewDidEndDecelerating:scrollView];
     
-    self.categoriesPageControl.currentPage = pageNumber;
+    ANCategory *category = [self.categories objectAtIndex:self.pageControl.currentPage];
+    self.navigationItem.title = category.name;
+}
+
+#pragma mark - ANCategoryViewCellDelegate
+
+- (void)didSelectArticle:(ANArticle *)article amongArticles:(NSArray *)articles
+{
+    ANArticlesViewController *articlesViewController = [ANArticlesViewController newInstance];
+    articlesViewController.selectedArticle = article;
+    articlesViewController.articles = articles;
+
+    [self.navigationController pushViewController:articlesViewController animated:YES];
 }
 
 @end

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Articles View Controller-->
+        <scene sceneID="u7E-jg-vYY">
+            <objects>
+                <viewController storyboardIdentifier="ANArticlesViewController" id="GPM-iq-Q0F" customClass="ANArticlesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oax-fT-CHi"/>
+                        <viewControllerLayoutGuide type="bottom" id="RvV-r6-1CA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eiH-cz-iEn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-t4-kz3">
+                                <rect key="frame" x="0.0" y="548" width="320" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qdH-jL-Lcf"/>
+                                </constraints>
+                            </pageControl>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s3M-7U-4a7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="b17-IT-haf">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GPM-iq-Q0F" id="MGT-RL-yWQ"/>
+                                    <outlet property="delegate" destination="GPM-iq-Q0F" id="awN-Gu-3dz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s3M-7U-4a7" firstAttribute="top" secondItem="oax-fT-CHi" secondAttribute="bottom" id="6IQ-89-6J9"/>
+                            <constraint firstItem="s3M-7U-4a7" firstAttribute="leading" secondItem="eiH-cz-iEn" secondAttribute="leading" id="Kcu-Rf-VPF"/>
+                            <constraint firstItem="R1g-t4-kz3" firstAttribute="top" secondItem="s3M-7U-4a7" secondAttribute="bottom" id="ek3-qj-KBP"/>
+                            <constraint firstAttribute="trailing" secondItem="R1g-t4-kz3" secondAttribute="trailing" id="k28-gb-KUj"/>
+                            <constraint firstItem="R1g-t4-kz3" firstAttribute="leading" secondItem="eiH-cz-iEn" secondAttribute="leading" id="ooe-dy-gok"/>
+                            <constraint firstItem="RvV-r6-1CA" firstAttribute="top" secondItem="R1g-t4-kz3" secondAttribute="bottom" id="spq-jD-XSy"/>
+                            <constraint firstAttribute="trailing" secondItem="s3M-7U-4a7" secondAttribute="trailing" id="va2-3y-vJI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="s3M-7U-4a7" id="FDR-vs-PeQ"/>
+                        <outlet property="pageControl" destination="R1g-t4-kz3" id="PLC-ee-U9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdt-to-sE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="177"/>
+        </scene>
+    </scenes>
+</document>
