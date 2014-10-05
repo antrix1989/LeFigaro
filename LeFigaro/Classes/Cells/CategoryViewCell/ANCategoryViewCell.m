@@ -22,6 +22,7 @@ static NSString *kArticleCell = @"ANArticleCell";
 
 @property (strong, nonatomic) ANSubCategory *firstSubCategory;
 @property (strong, nonatomic) NSArray *articles;
+@property (strong, nonatomic) NSArray *filteredArticles;
 @property (strong, nonatomic) ANArticle *promotedArticle;
 
 @end
@@ -49,6 +50,13 @@ static NSString *kArticleCell = @"ANArticleCell";
 
 #pragma mark - Public
 
+- (void)filterArticlesByText:(NSString *)text
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"title like[cd] '*%1$@*' OR subtitle like[cd] '*%1$@*'", text]];
+    self.filteredArticles = [self.articles filteredArrayUsingPredicate:predicate];
+    [self.articlesTableView reloadData];
+}
+
 - (void)setCategory:(ANCategory *)category
 {
     _category = category;
@@ -69,6 +77,7 @@ static NSString *kArticleCell = @"ANArticleCell";
             }
             
             self.articles = articles;
+            self.filteredArticles = articles;
             
             [self.articlesTableView reloadData];
         }];
@@ -81,13 +90,13 @@ static NSString *kArticleCell = @"ANArticleCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.articles.count;
+    return self.filteredArticles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ANArticleCell *articleCell = [tableView dequeueReusableCellWithIdentifier:kArticleCell forIndexPath:indexPath];
-    articleCell.article = self.articles[indexPath.row];
+    articleCell.article = self.filteredArticles[indexPath.row];
     
     return articleCell;
 }
@@ -96,7 +105,7 @@ static NSString *kArticleCell = @"ANArticleCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate didSelectArticle:self.articles[indexPath.row] amongArticles:self.allArticles];
+    [self.delegate didSelectArticle:self.filteredArticles[indexPath.row] amongArticles:self.allArticles];
 }
 
 #pragma mark - Private
@@ -110,11 +119,10 @@ static NSString *kArticleCell = @"ANArticleCell";
     self.promotedArticleTitleLabel.text = promotedArticle.title;
 }
 
-
 - (NSArray *)allArticles
 {
     NSMutableArray *allArticles = [[NSMutableArray alloc] initWithCapacity:self.articles.count + 1];
-    [allArticles addObjectsFromArray:self.articles];
+    [allArticles addObjectsFromArray:self.filteredArticles];
     [allArticles insertObject:self.promotedArticle atIndex:0];
     
     return allArticles;
