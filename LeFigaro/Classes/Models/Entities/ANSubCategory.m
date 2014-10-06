@@ -1,23 +1,23 @@
 #import "ANSubCategory.h"
-#import "ANApiRequest.h"
+#import "ANGetAllArticlesForSubCategoryRequest.h"
 
 @interface ANSubCategory ()
 
-@property (strong, nonatomic) ANApiRequest *apiClient;
+@property (strong, nonatomic) ANGetAllArticlesForSubCategoryRequest *getAllArticlesForSubCategoryRequest;
 
 @end
 
 @implementation ANSubCategory
 
-objection_requires(@"apiClient")
+objection_requires(@"getAllArticlesForSubCategoryRequest")
 
-@synthesize apiClient;
+@synthesize getAllArticlesForSubCategoryRequest;
 
 #pragma mark - Public
 
 - (void)getAllArticlesInBackground:(ANArrayResultBlock)block
 {
-    [self.apiClient getAllArticlesForSubCategory:self withBlock:block];
+    [self.getAllArticlesForSubCategoryRequest getAllArticlesForSubCategory:self withBlock:block];
 }
 
 #pragma mark - ANJSONSerializable
