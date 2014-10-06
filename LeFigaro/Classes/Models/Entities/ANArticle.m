@@ -1,22 +1,22 @@
 #import "ANArticle.h"
-#import "ANApiRequest.h"
+#import "ANGetArticleWithIDRequest.h"
 
 @interface ANArticle ()
 
-@property (strong, nonatomic) ANApiRequest *apiClient;
+@property (strong, nonatomic) ANGetArticleWithIDRequest *getArticleWithIDRequest;
 
 @end
 
 @implementation ANArticle
 
-objection_requires(@"apiClient")
-@synthesize apiClient;
+objection_requires(@"getArticleWithIDRequest")
+@synthesize getArticleWithIDRequest;
 
 #pragma mark - Public
 
 - (void)loadWithBlock:(ANBooleanResultBlock)block
 {
-    [self.apiClient getArticleWithID:self.remoteID withBlock:^(NSObject *object, NSError *error) {
+    [self.getArticleWithIDRequest getArticleWithID:self.remoteID withBlock:^(NSObject *object, NSError *error) {
         BOOL result = object && [object isKindOfClass:self.class];
         if (result) {
             ANArticle *tmpArticle = (ANArticle *)object;

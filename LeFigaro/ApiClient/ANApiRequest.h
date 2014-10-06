@@ -13,6 +13,4 @@ extern NSString *const ANLeFigaroErrorDomain;
 
 - (void)cancelAllOperations;
 
-- (void)getArticleWithID:(NSString *)articleID withBlock:(ANObjectResultBlock)block;
-
 @end

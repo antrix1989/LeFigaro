@@ -43,6 +43,7 @@
 		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
 		239F74B319E325E80070DF96 /* ANApiGetAllCategoriesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */; };
 		239F74B719E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */; };
+		239F74BA19E329A60070DF96 /* ANGetArticleWithIDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */; };
 		23DC2FA119E1D50E00E3CAD4 /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */; };
 		23DC2FA219E1D50E00E3CAD4 /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2FA019E1D50E00E3CAD4 /* mogend.sh */; };
 		23DCCEE519E323AC00F0D447 /* ANApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCCEE419E323AC00F0D447 /* ANApiRequest.m */; };
@@ -142,6 +143,8 @@
 		239F74B419E3268D0070DF96 /* ANApiRequest_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest_Private.h; sourceTree = "<group>"; };
 		239F74B519E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGetAllArticlesForSubCategoryRequest.h; sourceTree = "<group>"; };
 		239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGetAllArticlesForSubCategoryRequest.m; sourceTree = "<group>"; };
+		239F74B819E329A60070DF96 /* ANGetArticleWithIDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGetArticleWithIDRequest.h; sourceTree = "<group>"; };
+		239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGetArticleWithIDRequest.m; sourceTree = "<group>"; };
 		23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
 		23DC2FA019E1D50E00E3CAD4 /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
 		23DCCEE319E323AC00F0D447 /* ANApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */,
 				239F74B519E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.h */,
 				239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */,
+				239F74B819E329A60070DF96 /* ANGetArticleWithIDRequest.h */,
+				239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -588,6 +593,7 @@
 				2362EFF519E1DDBE00BC9AB1 /* _ANSubCategory.m in Sources */,
 				2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */,
 				2376302019CEF29F0022F349 /* ANHomeViewController.m in Sources */,
+				239F74BA19E329A60070DF96 /* ANGetArticleWithIDRequest.m in Sources */,
 				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
 				239F74B719E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m in Sources */,

@@ -28,34 +28,6 @@ objection_register_singleton(ANApiRequest)
     [self.manager.operationQueue cancelAllOperations];
 }
 
-- (void)getArticleWithID:(NSString *)articleID withBlock:(ANObjectResultBlock)block
-{
-    if (!block) {
-        return;
-    }
-    
-    NSString *urlString = [NSString stringWithFormat:@"/article/%@", articleID];
-    
-    [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        NSLog(@"responseObject: %@", responseObject);
-        
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"ANArticle" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
-        ANArticle *article = [[ANArticle alloc] initWithEntity:entity insertIntoManagedObjectContext:APP_DELEGATE.managedObjectContext];
-        [[JSObjection defaultInjector] injectDependencies:article];
-        
-        [article readFromDictionary:responseObject];
-        
-        block(article, nil);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", [error localizedDescription]);
-        
-        if (block) {
-            block(false, error);
-        }
-    }];
-}
-
 #pragma mark - Private
 
 - (AFHTTPRequestOperationManager *)manager
