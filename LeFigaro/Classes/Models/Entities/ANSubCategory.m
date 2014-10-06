@@ -1,9 +1,9 @@
 #import "ANSubCategory.h"
-#import "ANApiClient.h"
+#import "ANApiRequest.h"
 
 @interface ANSubCategory ()
 
-@property (strong, nonatomic) ANApiClient *apiClient;
+@property (strong, nonatomic) ANApiRequest *apiClient;
 
 @end
 

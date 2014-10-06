@@ -11,11 +11,9 @@ extern NSString *const ANLeFigaroErrorDomain;
 
 @class ANSubCategory;
 
-@interface ANApiClient : NSObject
+@interface ANApiRequest : NSObject
 
 - (void)cancelAllOperations;
-
-- (void)getAllCategories:(ANArrayResultBlock)block;
 
 - (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block;
 

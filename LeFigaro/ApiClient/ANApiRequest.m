@@ -7,7 +7,8 @@
 //
 
 #import <AFNetworking.h>
-#import "ANApiClient.h"
+#import "ANApiRequest.h"
+#import "ANApiRequest_Private.h"
 #import "ANCategory.h"
 #import "ANSubCategory.h"
 #import "ANArticle.h"
@@ -16,57 +17,15 @@ NSString *const kBaseUrlString = @"http://figaro.service.yagasp.com";
 NSString *const ANLeFigaroErrorDomain = @"com.lefigaro.app";
 const int ANParseError = 1;
 
-@interface ANApiClient ()
+@implementation ANApiRequest
 
-@property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
-@property (strong, nonatomic) dispatch_queue_t syncDispatchQueue;
-
-@end
-
-@implementation ANApiClient
-
-objection_register_singleton(ANApiClient)
+objection_register_singleton(ANApiRequest)
 
 #pragma mark - PUblic
 
 - (void)cancelAllOperations
 {
     [self.manager.operationQueue cancelAllOperations];
-}
-
-- (void)getAllCategories:(ANArrayResultBlock)block
-{
-    if (!block) {
-        return;
-    }
-    
-    NSString *urlString = [NSString stringWithFormat:@"/article/categories"];
-    
-    [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"responseObject: %@", responseObject);
-        
-        NSMutableArray *categories = [NSMutableArray new];
-        
-        for (NSDictionary *categoryInfo in responseObject) {
-            
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"ANCategory" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
-            ANCategory *category = [[ANCategory alloc] initWithEntity:entity insertIntoManagedObjectContext:APP_DELEGATE.managedObjectContext];
-            [[JSObjection defaultInjector] injectDependencies:category];
-            
-            [category readFromDictionary:categoryInfo];
-            
-            [categories addObject:category];
-        }
-        
-        block(categories, nil);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", [error localizedDescription]);
-        
-        if (block) {
-            block(nil, error);
-        }
-    }];
 }
 
 - (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block

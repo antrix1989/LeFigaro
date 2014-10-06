@@ -1,9 +1,9 @@
 #import "ANArticle.h"
-#import "ANApiClient.h"
+#import "ANApiRequest.h"
 
 @interface ANArticle ()
 
-@property (strong, nonatomic) ANApiClient *apiClient;
+@property (strong, nonatomic) ANApiRequest *apiClient;
 
 @end
 

@@ -40,10 +40,11 @@
 		239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEBC19C435FB000FD520 /* InfoPlist.strings */; };
 		239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEBF19C435FB000FD520 /* LeFigaroTests.m */; };
 		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
-		239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDE19C43967000FD520 /* ANApiClient.m */; };
 		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
+		239F74B319E325E80070DF96 /* ANApiGetAllCategoriesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */; };
 		23DC2FA119E1D50E00E3CAD4 /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */; };
 		23DC2FA219E1D50E00E3CAD4 /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2FA019E1D50E00E3CAD4 /* mogend.sh */; };
+		23DCCEE519E323AC00F0D447 /* ANApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCCEE419E323AC00F0D447 /* ANApiRequest.m */; };
 		5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 /* End PBXBuildFile section */
 
@@ -133,12 +134,15 @@
 		239CCED919C43806000FD520 /* ANAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		239CCEDA19C43806000FD520 /* ANAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
 		239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANJSONSerializable.h; sourceTree = "<group>"; };
-		239CCEDD19C43967000FD520 /* ANApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiClient.h; sourceTree = "<group>"; };
-		239CCEDE19C43967000FD520 /* ANApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiClient.m; sourceTree = "<group>"; };
 		239CCEE019C43A1C000FD520 /* ANConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANConstants.h; sourceTree = "<group>"; };
 		239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANActivityIndicatorView.xib; sourceTree = "<group>"; };
+		239F74B119E325E80070DF96 /* ANApiGetAllCategoriesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiGetAllCategoriesRequest.h; sourceTree = "<group>"; };
+		239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiGetAllCategoriesRequest.m; sourceTree = "<group>"; };
+		239F74B419E3268D0070DF96 /* ANApiRequest_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest_Private.h; sourceTree = "<group>"; };
 		23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
 		23DC2FA019E1D50E00E3CAD4 /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
+		23DCCEE319E323AC00F0D447 /* ANApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest.h; sourceTree = "<group>"; };
+		23DCCEE419E323AC00F0D447 /* ANApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiRequest.m; sourceTree = "<group>"; };
 		89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeFigaro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeFigaro.xcconfig"; path = "Pods/Pods-LeFigaro.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -296,10 +300,9 @@
 				239CCED919C43806000FD520 /* ANAppDelegate.h */,
 				239CCEDA19C43806000FD520 /* ANAppDelegate.m */,
 				239CCEE019C43A1C000FD520 /* ANConstants.h */,
-				239CCEDD19C43967000FD520 /* ANApiClient.h */,
-				239CCEDE19C43967000FD520 /* ANApiClient.m */,
 				2376304F19CF679B0022F349 /* ANArticleHtmlGenerator.h */,
 				2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */,
+				23DCCEE219E323AC00F0D447 /* ApiClient */,
 				239CCECC19C437B3000FD520 /* Classes */,
 				239CCEAC19C435FB000FD520 /* Images.xcassets */,
 				239CCE9B19C435FB000FD520 /* Supporting Files */,
@@ -385,6 +388,18 @@
 				23DC2FA019E1D50E00E3CAD4 /* mogend.sh */,
 			);
 			path = Scripts;
+			sourceTree = "<group>";
+		};
+		23DCCEE219E323AC00F0D447 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				23DCCEE319E323AC00F0D447 /* ANApiRequest.h */,
+				23DCCEE419E323AC00F0D447 /* ANApiRequest.m */,
+				239F74B419E3268D0070DF96 /* ANApiRequest_Private.h */,
+				239F74B119E325E80070DF96 /* ANApiGetAllCategoriesRequest.h */,
+				239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,8 +577,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2376303919CF04290022F349 /* ANArticleViewCell.m in Sources */,
-				239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */,
 				2362EFF119E1DDBE00BC9AB1 /* ANCategory.m in Sources */,
+				239F74B319E325E80070DF96 /* ANApiGetAllCategoriesRequest.m in Sources */,
 				2376304E19CF603D0022F349 /* ANPageViewController.m in Sources */,
 				2362EFF519E1DDBE00BC9AB1 /* _ANSubCategory.m in Sources */,
 				2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */,
@@ -572,6 +587,7 @@
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
 				2362EFF019E1DDBE00BC9AB1 /* ANArticle.m in Sources */,
 				2376304B19CF5D0F0022F349 /* ANViewController.m in Sources */,
+				23DCCEE519E323AC00F0D447 /* ANApiRequest.m in Sources */,
 				2362EFF319E1DDBE00BC9AB1 /* _ANArticle.m in Sources */,
 				2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */,
 				2362EFF219E1DDBE00BC9AB1 /* ANSubCategory.m in Sources */,
@@ -699,6 +715,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
 				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -713,6 +730,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
 				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,6 +1,6 @@
 #import "ANCategory.h"
 #import "ANSubCategory.h"
-#import "ANApiClient.h"
+#import "ANApiGetAllCategoriesRequest.h"
 
 @interface ANCategory ()
 
@@ -14,9 +14,9 @@
 
 + (void)getAllCategoriesInBackground:(ANArrayResultBlock)block
 {
-    ANApiClient *apiClient = [[JSObjection defaultInjector] getObject:ANApiClient.class];
+    ANApiGetAllCategoriesRequest *getAllCategoriesRequest = [[JSObjection defaultInjector] getObject:ANApiGetAllCategoriesRequest.class];
     
-    [apiClient getAllCategories:block];
+    [getAllCategoriesRequest getAllCategories:block];
 }
 
 #pragma mark - ANJSONSerializable
