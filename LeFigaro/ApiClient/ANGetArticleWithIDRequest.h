@@ -10,6 +10,11 @@
 
 @interface ANGetArticleWithIDRequest : ANApiRequest
 
+/**
+ Returns article with specified remote id.
+ @param articleID Article's id on server.
+ @param block Block to return.
+ */
 - (void)getArticleWithID:(NSString *)articleID withBlock:(ANObjectResultBlock)block;
 
 @end

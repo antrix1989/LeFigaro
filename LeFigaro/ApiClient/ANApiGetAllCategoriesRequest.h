@@ -10,6 +10,10 @@
 
 @interface ANApiGetAllCategoriesRequest : ANApiRequest
 
+/**
+ Returns all categories from server.
+ @param block Block to return.
+ */
 - (void)getAllCategories:(ANArrayResultBlock)block;
 
 @end

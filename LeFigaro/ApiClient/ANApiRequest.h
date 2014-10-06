@@ -11,6 +11,9 @@ extern NSString *const ANLeFigaroErrorDomain;
 
 @interface ANApiRequest : NSObject
 
+/**
+ Cancel all operations for this request.
+ */
 - (void)cancelAllOperations;
 
 @end

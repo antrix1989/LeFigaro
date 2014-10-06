@@ -12,6 +12,11 @@
 
 @interface ANGetAllArticlesForSubCategoryRequest : ANApiRequest
 
+/**
+ Returns all articles for specified subCategory.
+ @param subCategory Subcatery of articles.
+ @param block Block to return.
+ */
 - (void)getAllArticlesForSubCategory:(ANSubCategory *)subCategory withBlock:(ANArrayResultBlock)block;
 
 @end
