@@ -20,4 +20,6 @@
 @property (strong, nonatomic) ANCategory* category;
 @property (weak, nonatomic) id<ANCategoryViewCellDelegate> delegate;
 
+- (void)filterArticlesByText:(NSString *)text;
+
 @end

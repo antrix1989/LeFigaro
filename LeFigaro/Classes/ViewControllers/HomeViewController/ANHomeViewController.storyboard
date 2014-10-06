@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tly-r6-bVM">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -32,8 +33,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QNS-Sl-aS4">
+                                <rect key="frame" x="0.0" y="548" width="320" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="y7j-OP-U9V"/>
+                                </constraints>
+                            </pageControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LJb-Kb-eCe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="adl-ng-Gdk"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="1yw-qJ-PnA"/>
+                                </connections>
+                            </searchBar>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-Hc-abX">
-                                <rect key="frame" x="0.0" y="64" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="440"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="P6b-3b-RIi">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -46,29 +64,26 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="IAB-VP-36k"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QNS-Sl-aS4">
-                                <rect key="frame" x="0.0" y="548" width="320" height="20"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="y7j-OP-U9V"/>
-                                </constraints>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QNS-Sl-aS4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="04A-de-0mY"/>
-                            <constraint firstItem="lPJ-Hc-abX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4tV-0i-vTI"/>
                             <constraint firstItem="lPJ-Hc-abX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BVN-mJ-NOk"/>
                             <constraint firstItem="QNS-Sl-aS4" firstAttribute="top" secondItem="lPJ-Hc-abX" secondAttribute="bottom" id="BwY-mt-O1e"/>
                             <constraint firstAttribute="trailing" secondItem="lPJ-Hc-abX" secondAttribute="trailing" id="E3O-Ji-TyX"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QNS-Sl-aS4" secondAttribute="bottom" id="Gym-AU-gx3"/>
                             <constraint firstAttribute="trailing" secondItem="QNS-Sl-aS4" secondAttribute="trailing" id="Jxu-Sm-mfi"/>
+                            <constraint firstItem="LJb-Kb-eCe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="SW7-3p-0Wr"/>
+                            <constraint firstItem="lPJ-Hc-abX" firstAttribute="top" secondItem="LJb-Kb-eCe" secondAttribute="bottom" id="dQN-mx-1uG"/>
+                            <constraint firstItem="LJb-Kb-eCe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pao-eY-CFI"/>
+                            <constraint firstAttribute="trailing" secondItem="LJb-Kb-eCe" secondAttribute="trailing" id="xuz-s3-rxx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WcE-mW-njL"/>
                     <connections>
                         <outlet property="collectionView" destination="lPJ-Hc-abX" id="D6y-ca-g5u"/>
                         <outlet property="pageControl" destination="QNS-Sl-aS4" id="PKY-lY-ish"/>
+                        <outlet property="searchBar" destination="LJb-Kb-eCe" id="sJN-xH-To3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

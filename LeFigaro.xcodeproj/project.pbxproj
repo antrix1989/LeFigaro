@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1B71520667FF4452B92FDEA5 /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
+		2362EFE019E1DD9500BC9AB1 /* LeFigaro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFDE19E1DD9500BC9AB1 /* LeFigaro.xcdatamodeld */; };
+		2362EFF019E1DDBE00BC9AB1 /* ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFE319E1DDBE00BC9AB1 /* ANArticle.m */; };
+		2362EFF119E1DDBE00BC9AB1 /* ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFE519E1DDBE00BC9AB1 /* ANCategory.m */; };
+		2362EFF219E1DDBE00BC9AB1 /* ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFE719E1DDBE00BC9AB1 /* ANSubCategory.m */; };
+		2362EFF319E1DDBE00BC9AB1 /* _ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFEA19E1DDBE00BC9AB1 /* _ANArticle.m */; };
+		2362EFF419E1DDBE00BC9AB1 /* _ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFEC19E1DDBE00BC9AB1 /* _ANCategory.m */; };
+		2362EFF519E1DDBE00BC9AB1 /* _ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362EFEE19E1DDBE00BC9AB1 /* _ANSubCategory.m */; };
 		2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376300E19CEDCBE0022F349 /* ANArticleCell.m */; };
 		2376301519CEDCBE0022F349 /* ANArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2376300F19CEDCBE0022F349 /* ANArticleCell.xib */; };
 		2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376301219CEDCBE0022F349 /* ANCategoryViewCell.m */; };
@@ -21,8 +28,6 @@
 		2376304B19CF5D0F0022F349 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376304A19CF5D0F0022F349 /* ANViewController.m */; };
 		2376304E19CF603D0022F349 /* ANPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376304D19CF603D0022F349 /* ANPageViewController.m */; };
 		2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */; };
-		2376305819CF695C0022F349 /* ANSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305419CF695C0022F349 /* ANSubCategory.m */; };
-		2376305919CF695C0022F349 /* ANArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376305719CF695C0022F349 /* ANArticle.m */; };
 		239CCE9519C435FB000FD520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9419C435FB000FD520 /* Foundation.framework */; };
 		239CCE9719C435FB000FD520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9619C435FB000FD520 /* CoreGraphics.framework */; };
 		239CCE9919C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
@@ -34,12 +39,39 @@
 		239CCEB619C435FB000FD520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239CCE9819C435FB000FD520 /* UIKit.framework */; };
 		239CCEBE19C435FB000FD520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEBC19C435FB000FD520 /* InfoPlist.strings */; };
 		239CCEC019C435FB000FD520 /* LeFigaroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEBF19C435FB000FD520 /* LeFigaroTests.m */; };
-		239CCED619C437B3000FD520 /* ANCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCED019C437B3000FD520 /* ANCategory.m */; };
 		239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDA19C43806000FD520 /* ANAppDelegate.m */; };
-		239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 239CCEDE19C43967000FD520 /* ANApiClient.m */; };
 		239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */; };
+		239F74B319E325E80070DF96 /* ANApiGetAllCategoriesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */; };
+		239F74B719E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */; };
+		239F74BA19E329A60070DF96 /* ANGetArticleWithIDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */; };
+		23DC2FA119E1D50E00E3CAD4 /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */; };
+		23DC2FA219E1D50E00E3CAD4 /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23DC2FA019E1D50E00E3CAD4 /* mogend.sh */; };
+		23DCCEE519E323AC00F0D447 /* ANApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCCEE419E323AC00F0D447 /* ANApiRequest.m */; };
 		5E0C340BBDDB43A9B053B22C /* libPods-LeFigaro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		23DC2FA319E1D5AF00E3CAD4 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodel;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).mom",
+			);
+			script = "echo \"Running mogen\"\n\"${PROJECT_DIR}/LeFigaro/Scripts/mogen.sh\"";
+		};
+		23DC2FA419E1D5E700E3CAD4 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodeld;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).mom",
+			);
+			script = "echo \"Running mogend\"\n\"${PROJECT_DIR}/LeFigaro/Scripts/mogend.sh\"";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		239CCEB719C435FB000FD520 /* PBXContainerItemProxy */ = {
@@ -52,6 +84,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2362EFDF19E1DD9500BC9AB1 /* LeFigaro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeFigaro.xcdatamodel; sourceTree = "<group>"; };
+		2362EFE219E1DDBE00BC9AB1 /* ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticle.h; sourceTree = "<group>"; };
+		2362EFE319E1DDBE00BC9AB1 /* ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticle.m; sourceTree = "<group>"; };
+		2362EFE419E1DDBE00BC9AB1 /* ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategory.h; sourceTree = "<group>"; };
+		2362EFE519E1DDBE00BC9AB1 /* ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategory.m; sourceTree = "<group>"; };
+		2362EFE619E1DDBE00BC9AB1 /* ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSubCategory.h; sourceTree = "<group>"; };
+		2362EFE719E1DDBE00BC9AB1 /* ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSubCategory.m; sourceTree = "<group>"; };
+		2362EFE919E1DDBE00BC9AB1 /* _ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ANArticle.h; sourceTree = "<group>"; };
+		2362EFEA19E1DDBE00BC9AB1 /* _ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ANArticle.m; sourceTree = "<group>"; };
+		2362EFEB19E1DDBE00BC9AB1 /* _ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ANCategory.h; sourceTree = "<group>"; };
+		2362EFEC19E1DDBE00BC9AB1 /* _ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ANCategory.m; sourceTree = "<group>"; };
+		2362EFED19E1DDBE00BC9AB1 /* _ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ANSubCategory.h; sourceTree = "<group>"; };
+		2362EFEE19E1DDBE00BC9AB1 /* _ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ANSubCategory.m; sourceTree = "<group>"; };
+		2362EFEF19E1DDBE00BC9AB1 /* ModelIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelIncludes.h; sourceTree = "<group>"; };
 		2376300D19CEDCBE0022F349 /* ANArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticleCell.h; sourceTree = "<group>"; };
 		2376300E19CEDCBE0022F349 /* ANArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticleCell.m; sourceTree = "<group>"; };
 		2376300F19CEDCBE0022F349 /* ANArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANArticleCell.xib; sourceTree = "<group>"; };
@@ -73,10 +119,6 @@
 		2376304D19CF603D0022F349 /* ANPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPageViewController.m; sourceTree = "<group>"; };
 		2376304F19CF679B0022F349 /* ANArticleHtmlGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticleHtmlGenerator.h; sourceTree = "<group>"; };
 		2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticleHtmlGenerator.m; sourceTree = "<group>"; };
-		2376305319CF695C0022F349 /* ANSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSubCategory.h; sourceTree = "<group>"; };
-		2376305419CF695C0022F349 /* ANSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSubCategory.m; sourceTree = "<group>"; };
-		2376305619CF695C0022F349 /* ANArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANArticle.h; sourceTree = "<group>"; };
-		2376305719CF695C0022F349 /* ANArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANArticle.m; sourceTree = "<group>"; };
 		239CCE9119C435FB000FD520 /* LeFigaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeFigaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239CCE9419C435FB000FD520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		239CCE9619C435FB000FD520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,15 +133,22 @@
 		239CCEBB19C435FB000FD520 /* LeFigaroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeFigaroTests-Info.plist"; sourceTree = "<group>"; };
 		239CCEBD19C435FB000FD520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		239CCEBF19C435FB000FD520 /* LeFigaroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeFigaroTests.m; sourceTree = "<group>"; };
-		239CCECF19C437B3000FD520 /* ANCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCategory.h; sourceTree = "<group>"; };
-		239CCED019C437B3000FD520 /* ANCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCategory.m; sourceTree = "<group>"; };
 		239CCED919C43806000FD520 /* ANAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		239CCEDA19C43806000FD520 /* ANAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
 		239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANJSONSerializable.h; sourceTree = "<group>"; };
-		239CCEDD19C43967000FD520 /* ANApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiClient.h; sourceTree = "<group>"; };
-		239CCEDE19C43967000FD520 /* ANApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiClient.m; sourceTree = "<group>"; };
 		239CCEE019C43A1C000FD520 /* ANConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANConstants.h; sourceTree = "<group>"; };
 		239CCEE419C43E71000FD520 /* ANActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANActivityIndicatorView.xib; sourceTree = "<group>"; };
+		239F74B119E325E80070DF96 /* ANApiGetAllCategoriesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiGetAllCategoriesRequest.h; sourceTree = "<group>"; };
+		239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiGetAllCategoriesRequest.m; sourceTree = "<group>"; };
+		239F74B419E3268D0070DF96 /* ANApiRequest_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest_Private.h; sourceTree = "<group>"; };
+		239F74B519E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGetAllArticlesForSubCategoryRequest.h; sourceTree = "<group>"; };
+		239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGetAllArticlesForSubCategoryRequest.m; sourceTree = "<group>"; };
+		239F74B819E329A60070DF96 /* ANGetArticleWithIDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGetArticleWithIDRequest.h; sourceTree = "<group>"; };
+		239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGetArticleWithIDRequest.m; sourceTree = "<group>"; };
+		23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
+		23DC2FA019E1D50E00E3CAD4 /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
+		23DCCEE319E323AC00F0D447 /* ANApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANApiRequest.h; sourceTree = "<group>"; };
+		23DCCEE419E323AC00F0D447 /* ANApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANApiRequest.m; sourceTree = "<group>"; };
 		89D5AB91F0BB49F0BEC406BC /* libPods-LeFigaro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeFigaro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F89987FD4CF41D382BC2263 /* Pods-LeFigaro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeFigaro.xcconfig"; path = "Pods/Pods-LeFigaro.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +179,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2362EFE119E1DDBE00BC9AB1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2362EFE219E1DDBE00BC9AB1 /* ANArticle.h */,
+				2362EFE319E1DDBE00BC9AB1 /* ANArticle.m */,
+				2362EFE419E1DDBE00BC9AB1 /* ANCategory.h */,
+				2362EFE519E1DDBE00BC9AB1 /* ANCategory.m */,
+				2362EFE619E1DDBE00BC9AB1 /* ANSubCategory.h */,
+				2362EFE719E1DDBE00BC9AB1 /* ANSubCategory.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2362EFE819E1DDBE00BC9AB1 /* EntitiesMachine */ = {
+			isa = PBXGroup;
+			children = (
+				2362EFE919E1DDBE00BC9AB1 /* _ANArticle.h */,
+				2362EFEA19E1DDBE00BC9AB1 /* _ANArticle.m */,
+				2362EFEB19E1DDBE00BC9AB1 /* _ANCategory.h */,
+				2362EFEC19E1DDBE00BC9AB1 /* _ANCategory.m */,
+				2362EFED19E1DDBE00BC9AB1 /* _ANSubCategory.h */,
+				2362EFEE19E1DDBE00BC9AB1 /* _ANSubCategory.m */,
+			);
+			path = EntitiesMachine;
+			sourceTree = "<group>";
+		};
 		2376300C19CEDCBE0022F349 /* ArticleCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,24 +268,6 @@
 			path = ArticleViewCell;
 			sourceTree = "<group>";
 		};
-		2376305219CF695C0022F349 /* SubCategory */ = {
-			isa = PBXGroup;
-			children = (
-				2376305319CF695C0022F349 /* ANSubCategory.h */,
-				2376305419CF695C0022F349 /* ANSubCategory.m */,
-			);
-			path = SubCategory;
-			sourceTree = "<group>";
-		};
-		2376305519CF695C0022F349 /* Article */ = {
-			isa = PBXGroup;
-			children = (
-				2376305619CF695C0022F349 /* ANArticle.h */,
-				2376305719CF695C0022F349 /* ANArticle.m */,
-			);
-			path = Article;
-			sourceTree = "<group>";
-		};
 		239CCE8819C435FB000FD520 = {
 			isa = PBXGroup;
 			children = (
@@ -249,13 +306,13 @@
 				239CCED919C43806000FD520 /* ANAppDelegate.h */,
 				239CCEDA19C43806000FD520 /* ANAppDelegate.m */,
 				239CCEE019C43A1C000FD520 /* ANConstants.h */,
-				239CCEDD19C43967000FD520 /* ANApiClient.h */,
-				239CCEDE19C43967000FD520 /* ANApiClient.m */,
 				2376304F19CF679B0022F349 /* ANArticleHtmlGenerator.h */,
 				2376305019CF679B0022F349 /* ANArticleHtmlGenerator.m */,
+				23DCCEE219E323AC00F0D447 /* ApiClient */,
 				239CCECC19C437B3000FD520 /* Classes */,
 				239CCEAC19C435FB000FD520 /* Images.xcassets */,
 				239CCE9B19C435FB000FD520 /* Supporting Files */,
+				23DC2F9E19E1D50E00E3CAD4 /* Scripts */,
 			);
 			path = LeFigaro;
 			sourceTree = "<group>";
@@ -303,21 +360,13 @@
 		239CCECD19C437B3000FD520 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				239CCECE19C437B3000FD520 /* Category */,
-				2376305219CF695C0022F349 /* SubCategory */,
-				2376305519CF695C0022F349 /* Article */,
+				2362EFEF19E1DDBE00BC9AB1 /* ModelIncludes.h */,
+				2362EFE119E1DDBE00BC9AB1 /* Entities */,
+				2362EFE819E1DDBE00BC9AB1 /* EntitiesMachine */,
+				2362EFDE19E1DD9500BC9AB1 /* LeFigaro.xcdatamodeld */,
 				239CCEDC19C438F2000FD520 /* ANJSONSerializable.h */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		239CCECE19C437B3000FD520 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				239CCECF19C437B3000FD520 /* ANCategory.h */,
-				239CCED019C437B3000FD520 /* ANCategory.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		239CCEE319C43E71000FD520 /* Views */ = {
@@ -338,6 +387,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		23DC2F9E19E1D50E00E3CAD4 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				23DC2F9F19E1D50E00E3CAD4 /* mogen.sh */,
+				23DC2FA019E1D50E00E3CAD4 /* mogend.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		23DCCEE219E323AC00F0D447 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				23DCCEE319E323AC00F0D447 /* ANApiRequest.h */,
+				23DCCEE419E323AC00F0D447 /* ANApiRequest.m */,
+				239F74B419E3268D0070DF96 /* ANApiRequest_Private.h */,
+				239F74B119E325E80070DF96 /* ANApiGetAllCategoriesRequest.h */,
+				239F74B219E325E80070DF96 /* ANApiGetAllCategoriesRequest.m */,
+				239F74B519E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.h */,
+				239F74B619E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m */,
+				239F74B819E329A60070DF96 /* ANGetArticleWithIDRequest.h */,
+				239F74B919E329A60070DF96 /* ANGetArticleWithIDRequest.m */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +426,8 @@
 				BCE382F2985747199B97853C /* Copy Pods Resources */,
 			);
 			buildRules = (
+				23DC2FA419E1D5E700E3CAD4 /* PBXBuildRule */,
+				23DC2FA319E1D5AF00E3CAD4 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -419,10 +495,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DC2FA219E1D50E00E3CAD4 /* mogend.sh in Resources */,
 				2376301519CEDCBE0022F349 /* ANArticleCell.xib in Resources */,
 				239CCEE519C43E71000FD520 /* ANActivityIndicatorView.xib in Resources */,
 				239CCEAD19C435FB000FD520 /* Images.xcassets in Resources */,
 				2376301719CEDCBE0022F349 /* ANCategoryViewCell.xib in Resources */,
+				23DC2FA119E1D50E00E3CAD4 /* mogen.sh in Resources */,
 				2376303A19CF04290022F349 /* ANArticleViewCell.xib in Resources */,
 				2376304819CF53A00022F349 /* ANHomeViewController.storyboard in Resources */,
 				239CCE9F19C435FB000FD520 /* InfoPlist.strings in Resources */,
@@ -509,19 +587,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2376303919CF04290022F349 /* ANArticleViewCell.m in Sources */,
-				239CCEDF19C43967000FD520 /* ANApiClient.m in Sources */,
+				2362EFF119E1DDBE00BC9AB1 /* ANCategory.m in Sources */,
+				239F74B319E325E80070DF96 /* ANApiGetAllCategoriesRequest.m in Sources */,
 				2376304E19CF603D0022F349 /* ANPageViewController.m in Sources */,
+				2362EFF519E1DDBE00BC9AB1 /* _ANSubCategory.m in Sources */,
 				2376305119CF679B0022F349 /* ANArticleHtmlGenerator.m in Sources */,
-				239CCED619C437B3000FD520 /* ANCategory.m in Sources */,
 				2376302019CEF29F0022F349 /* ANHomeViewController.m in Sources */,
+				239F74BA19E329A60070DF96 /* ANGetArticleWithIDRequest.m in Sources */,
 				239CCEDB19C43806000FD520 /* ANAppDelegate.m in Sources */,
-				2376305919CF695C0022F349 /* ANArticle.m in Sources */,
 				239CCEA119C435FB000FD520 /* main.m in Sources */,
+				239F74B719E3286C0070DF96 /* ANGetAllArticlesForSubCategoryRequest.m in Sources */,
+				2362EFF019E1DDBE00BC9AB1 /* ANArticle.m in Sources */,
 				2376304B19CF5D0F0022F349 /* ANViewController.m in Sources */,
+				23DCCEE519E323AC00F0D447 /* ANApiRequest.m in Sources */,
+				2362EFF319E1DDBE00BC9AB1 /* _ANArticle.m in Sources */,
 				2376301419CEDCBE0022F349 /* ANArticleCell.m in Sources */,
+				2362EFF219E1DDBE00BC9AB1 /* ANSubCategory.m in Sources */,
+				2362EFE019E1DD9500BC9AB1 /* LeFigaro.xcdatamodeld in Sources */,
+				2362EFF419E1DDBE00BC9AB1 /* _ANCategory.m in Sources */,
 				2376302A19CEF31E0022F349 /* ANArticlesViewController.m in Sources */,
 				2376301619CEDCBE0022F349 /* ANCategoryViewCell.m in Sources */,
-				2376305819CF695C0022F349 /* ANSubCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +727,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
 				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -656,6 +742,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeFigaro/LeFigaro-Prefix.pch";
 				INFOPLIST_FILE = "LeFigaro/LeFigaro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -734,6 +821,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2362EFDE19E1DD9500BC9AB1 /* LeFigaro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2362EFDF19E1DD9500BC9AB1 /* LeFigaro.xcdatamodel */,
+			);
+			currentVersion = 2362EFDF19E1DD9500BC9AB1 /* LeFigaro.xcdatamodel */;
+			path = LeFigaro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 239CCE8919C435FB000FD520 /* Project object */;
 }

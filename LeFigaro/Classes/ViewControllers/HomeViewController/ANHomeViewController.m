@@ -15,7 +15,10 @@
 
 static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 
-@interface ANHomeViewController () <ANCategoryViewCellDelegate>
+@interface ANHomeViewController () <ANCategoryViewCellDelegate, UISearchBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) ANCategoryViewCell* currentCategoryViewCell;
 
 @property (strong, nonatomic) NSArray *categories;
 
@@ -54,6 +57,15 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
         ANCategory *category = [self.categories objectAtIndex:0];
         self.navigationItem.title = category.name;
     }];
+    
+    self.searchBar.text = @"";
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.searchBar resignFirstResponder];
+    
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -68,6 +80,7 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
     ANCategoryViewCell *categoryViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:kCategoryViewCell forIndexPath:indexPath];
     categoryViewCell.delegate = self;
     categoryViewCell.category = [self.categories objectAtIndex:indexPath.item];
+    self.currentCategoryViewCell = categoryViewCell;
     
     return categoryViewCell;
 }
@@ -76,7 +89,14 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [super scrollViewDidEndDecelerating:scrollView];
+    CGFloat pageWidth = self.collectionView.frame.size.width;
+    NSUInteger pageNumber = (self.collectionView.contentOffset.x / pageWidth);
+    
+    if (self.pageControl.currentPage != pageNumber) {
+        self.searchBar.text = @"";
+    }
+    
+    self.pageControl.currentPage = pageNumber;
     
     ANCategory *category = [self.categories objectAtIndex:self.pageControl.currentPage];
     self.navigationItem.title = category.name;
@@ -91,6 +111,18 @@ static NSString *kCategoryViewCell = @"ANCategoryViewCell";
     articlesViewController.articles = articles;
 
     [self.navigationController pushViewController:articlesViewController animated:YES];
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [self.currentCategoryViewCell filterArticlesByText:searchText];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
 }
 
 @end
