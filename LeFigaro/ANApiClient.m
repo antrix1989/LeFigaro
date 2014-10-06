@@ -48,7 +48,11 @@ objection_register_singleton(ANApiClient)
         NSMutableArray *categories = [NSMutableArray new];
         
         for (NSDictionary *categoryInfo in responseObject) {
-            ANCategory *category = [[JSObjection defaultInjector] getObject:ANCategory.class];
+            
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"ANCategory" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
+            ANCategory *category = [[ANCategory alloc] initWithEntity:entity insertIntoManagedObjectContext:APP_DELEGATE.managedObjectContext];
+            [[JSObjection defaultInjector] injectDependencies:category];
+            
             [category readFromDictionary:categoryInfo];
             
             [categories addObject:category];
@@ -88,7 +92,10 @@ objection_register_singleton(ANApiClient)
         NSArray *articlesInfo = responseObject[1];
         
         for (NSDictionary *articleInfo in articlesInfo) {
-            ANArticle *article = [[JSObjection defaultInjector] getObject:ANArticle.class];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"ANArticle" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
+            ANArticle *article = [[ANArticle alloc] initWithEntity:entity insertIntoManagedObjectContext:APP_DELEGATE.managedObjectContext];
+            [[JSObjection defaultInjector] injectDependencies:article];
+            
             [article readFromDictionary:articleInfo];
             
             [articles addObject:article];
@@ -116,7 +123,10 @@ objection_register_singleton(ANApiClient)
     [self.manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         NSLog(@"responseObject: %@", responseObject);
         
-        ANArticle *article = [[JSObjection defaultInjector] getObject:ANArticle.class];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"ANArticle" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
+        ANArticle *article = [[ANArticle alloc] initWithEntity:entity insertIntoManagedObjectContext:APP_DELEGATE.managedObjectContext];
+        [[JSObjection defaultInjector] injectDependencies:article];
+        
         [article readFromDictionary:responseObject];
         
         block(article, nil);

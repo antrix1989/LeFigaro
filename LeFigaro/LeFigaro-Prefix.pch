@@ -13,8 +13,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
     #import <Objection.h>
     #import "ANConstants.h"
     #import "ANActivityIndicatorView.h"
     #import "UIImageView+AFNetworking.h"
+    #import "ANAppDelegate.h"
 #endif
+
+#define APP_DELEGATE ((ANAppDelegate *)[[UIApplication sharedApplication] delegate])

@@ -1,11 +1,3 @@
-//
-//  ANArticle.m
-//  LeFigaro
-//
-//  Created by Sergey Demchenko on 9/14/14.
-//  Copyright (c) 2014 antrix1989. All rights reserved.
-//
-
 #import "ANArticle.h"
 #import "ANApiClient.h"
 
@@ -18,25 +10,7 @@
 @implementation ANArticle
 
 objection_requires(@"apiClient")
-
-#pragma mark - ANJSONSerializable
-
-- (void)readFromDictionary:(NSDictionary *)dictionary
-{
-    self.remoteID = dictionary[@"id"];
-    if (!self.remoteID) {
-        self.remoteID = dictionary[@"_id"];
-    }
-    self.title = dictionary[@"title"];
-    self.subtitle = dictionary[@"subtitle"];
-    self.imageUrl = dictionary[@"thumb"][@"link"];
-    self.content = dictionary[@"content"];
-    self.author = dictionary[@"author"];
-    
-    if ([dictionary[@"date"] intValue] > 0) {
-        self.date = [NSDate dateWithTimeIntervalSince1970:[dictionary[@"date"] intValue]];
-    }
-}
+@synthesize apiClient;
 
 #pragma mark - Public
 
@@ -57,6 +31,25 @@ objection_requires(@"apiClient")
             block(result, error);
         }
     }];
+}
+
+#pragma mark - ANJSONSerializable
+
+- (void)readFromDictionary:(NSDictionary *)dictionary
+{
+    self.remoteID = dictionary[@"id"];
+    if (!self.remoteID) {
+        self.remoteID = dictionary[@"_id"];
+    }
+    self.title = dictionary[@"title"];
+    self.subtitle = dictionary[@"subtitle"];
+    self.imageUrl = dictionary[@"thumb"][@"link"];
+    self.content = dictionary[@"content"];
+    self.author = dictionary[@"author"];
+    
+    if ([dictionary[@"date"] intValue] > 0) {
+        self.date = [NSDate dateWithTimeIntervalSince1970:[dictionary[@"date"] intValue]];
+    }
 }
 
 @end
