@@ -20,21 +20,31 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ANActivityIndicatorView (1.1.0)
-  - Objection (1.4)
+  - ANActivityIndicatorView (1.4.0)
+  - Masonry (1.0.1)
+  - Objection (1.6.1)
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (~> 2.3.1)
   - ANActivityIndicatorView (from `https://github.com/antrix1989/ANActivityIndicatorView.git`)
-  - Objection
+  - Masonry
+  - Objection (~> 1.6.1)
 
 EXTERNAL SOURCES:
   ANActivityIndicatorView:
     :git: https://github.com/antrix1989/ANActivityIndicatorView.git
 
+CHECKOUT OPTIONS:
+  ANActivityIndicatorView:
+    :commit: 3e10a54ed85766e69fe171c5257cf73df3e64318
+    :git: https://github.com/antrix1989/ANActivityIndicatorView.git
+
 SPEC CHECKSUMS:
   AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
-  ANActivityIndicatorView: 76f5f3fd9482066b83a32cc36e8f8ea0d111a6f2
-  Objection: aa9875dbf1b121a077f7e13d504a6ed01816a7f1
+  ANActivityIndicatorView: fda05fad883b87721bd32dd931ac83d6da0e1fe8
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f1126e1d5d8bdf7864655351bf0eb68366db69dc
+
+COCOAPODS: 1.0.1

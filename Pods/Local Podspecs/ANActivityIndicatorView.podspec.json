@@ -1,6 +1,6 @@
 {
   "name": "ANActivityIndicatorView",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "license": "MIT",
   "summary": "Full screen activity view.",
   "homepage": "https://github.com/antrix1989/ANActivityIndicatorView",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/antrix1989/ANActivityIndicatorView.git",
-    "tag": "1.1.0"
+    "tag": "1.4.0"
   },
   "requires_arc": true,
   "platforms": {

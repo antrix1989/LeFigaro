@@ -21,6 +21,13 @@
 // THE SOFTWARE.
 
 #import "ANActivityIndicatorView.h"
+#import "Masonry.h"
+
+@interface ANActivityIndicatorView()
+
+@property (nonatomic) NSTimer *timer;
+
+@end
 
 @implementation ANActivityIndicatorView
 
@@ -51,17 +58,47 @@
 
 - (void)showInView:(UIView *)view
 {
-    [self.customActivityIndicator startAnimating];
+    [self.timer invalidate];
     
-    self.frame = view.bounds;
-    self.center = view.center;
-    [view addSubview:self];
+    NSMethodSignature *signature = [self methodSignatureForSelector:@selector(showInViewPrivate:)];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature: signature];
+    [invocation setTarget: self];
+    [invocation setSelector:@selector(showInViewPrivate:)];
+    [invocation setArgument:&view atIndex:2];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.showAfterInterval invocation:invocation repeats:NO];
 }
 
 - (void)hide
 {
-    [self.customActivityIndicator startAnimating];
+    [self.timer invalidate];
+    self.timer = nil;
+    
+    if ([self.superview isKindOfClass:UIScrollView.class]) {
+        [(UIScrollView *)self.superview setScrollEnabled:YES];
+    }
+    
+    [self.customActivityIndicator stopAnimating];
     [self removeFromSuperview];
+}
+
+#pragma mark - Private
+
+- (void)showInViewPrivate:(UIView *)view
+{
+    [self.customActivityIndicator startAnimating];
+    
+    [view addSubview:self];
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(view.mas_top);
+        make.bottom.equalTo(view.mas_bottom);
+        make.left.equalTo(view.mas_left);
+        make.right.equalTo(view.mas_right);
+    }];
+    
+    if ([view isKindOfClass:UIScrollView.class]) {
+        [(UIScrollView *)view setScrollEnabled:NO];
+    }
 }
 
 @end

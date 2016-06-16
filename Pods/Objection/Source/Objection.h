@@ -40,7 +40,12 @@
             SEL selector = selectors[j]; \
             [requirements addObject:NSStringFromSelector(selector)]; \
         } \
-    return JSObjectionUtils.buildDependenciesForClass(self, requirements); \
+        return JSObjectionUtils.buildDependenciesForClass(self, requirements); \
+    }
+
+#define objection_requires_names(namedDependencies) \
+    + (NSDictionary *)objectionRequiresNames { \
+        return JSObjectionUtils.buildNamedDependenciesForClass(self, namedDependencies); \
     }
 
 #define objection_initializer_sel(selectorSymbol, args...) \

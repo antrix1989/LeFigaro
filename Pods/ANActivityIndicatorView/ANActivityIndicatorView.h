@@ -25,6 +25,12 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIImageView *customActivityIndicator;
 
+/**
+ Time in seconds to wait till the view will be shown.
+ Default value is 0.
+ */
+@property (nonatomic) NSTimeInterval showAfterInterval;
+
 @property (strong, nonatomic) NSString *customActivityImageNamePattern;
 
 - (id)initWithNibName:(NSString *)nibName;
