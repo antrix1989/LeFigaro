@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.3.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.3.1)
+    - AFNetworking/NSURLSession (= 2.3.1)
+    - AFNetworking/Reachability (= 2.3.1)
+    - AFNetworking/Security (= 2.3.1)
+    - AFNetworking/Serialization (= 2.3.1)
+    - AFNetworking/UIKit (= 2.3.1)
   - AFNetworking/NSURLConnection (2.3.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -33,8 +33,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/antrix1989/ANActivityIndicatorView.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  ANActivityIndicatorView: 3aa715386d417fc07a9814b1f0e06de716eda661
-  Objection: 8176a996209cdcd23490c57d6e807a25faa8d54d
+  AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
+  ANActivityIndicatorView: 76f5f3fd9482066b83a32cc36e8f8ea0d111a6f2
+  Objection: aa9875dbf1b121a077f7e13d504a6ed01816a7f1
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.39.0
